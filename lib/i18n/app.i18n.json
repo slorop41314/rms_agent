@@ -1,0 +1,11 @@
+{
+    "email": "Email",
+    "password": "Password",
+    "error": {
+        "defaultMessage": "Error occured"
+    },
+    "login": {
+        "message": "Hello login",
+        "button": "Login"
+    }
+}
