@@ -10,7 +10,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:domain/domain.dart' as _i4;
-import 'package:domain/src/use_case/auth/login_with_email_use_case.dart' as _i3;
+import 'package:domain/src/use_case/auth/get_current_auth_user_use_case.dart'
+    as _i3;
+import 'package:domain/src/use_case/auth/listen_auth_event_change_use_case.dart'
+    as _i5;
+import 'package:domain/src/use_case/auth/login_with_email_use_case.dart' as _i6;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -25,8 +29,12 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.LoginWithEmailUseCase>(
-        () => _i3.LoginWithEmailUseCase(gh<_i4.AuthRepository>()));
+    gh.factory<_i3.GetCurrentAuthUserUseCase>(
+        () => _i3.GetCurrentAuthUserUseCase(gh<_i4.AuthRepository>()));
+    gh.factory<_i5.ListenAuthEventChangeUseCase>(
+        () => _i5.ListenAuthEventChangeUseCase(gh<_i4.AuthRepository>()));
+    gh.factory<_i6.LoginWithEmailUseCase>(
+        () => _i6.LoginWithEmailUseCase(gh<_i4.AuthRepository>()));
     return this;
   }
 }

@@ -1,9 +1,9 @@
 import 'package:rms_agent/i18n/strings.g.dart';
-import 'package:rms_agent/src/routes/app_router.dart';
 import 'package:data/data.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:presenter/presenter.dart';
+import 'package:rms_agent/src/screens/main_app.dart';
 
 void main() async {
   await WidgetsFlutterBinding.ensureInitialized();
@@ -27,17 +27,6 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MainApp(),
-    );
-  }
-}
-
-class MainApp extends StatelessWidget {
-  final _appRouter = AppRouter();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _appRouter.config(),
     );
   }
 }

@@ -5,4 +5,8 @@ abstract class AuthRepository {
     String email,
     String password,
   );
+
+  Stream<AuthState> listenAuthEventChanges();
+  
+  Future<User?> getUserAuth();
 }
