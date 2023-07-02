@@ -2,7 +2,6 @@ import 'package:data/data.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:presenter/presenter.dart';
-import 'package:rms_agent/i18n/strings.g.dart';
 import 'package:rms_agent/src/screens/main_app.dart';
 import 'package:utilities/utilities.dart';
 

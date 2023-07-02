@@ -4,6 +4,7 @@ import 'package:domain/domain.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:utilities/utilities.dart';
 
 part 'login_state.dart';
 part 'login_event.dart';
@@ -66,9 +67,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   bool _validateForm(_LoginButtonPressed event) {
     _formValidations.clear();
     if (event.email.isEmpty) {
-      _formValidations['email'] = 'Email is not valid';
+      _formValidations['email'] = t.formValidations.emailNotValid;
     }
     if (event.password.isEmpty) {
+      // TODO(alb): add translations
       _formValidations['password'] = 'Password is not valid';
     }
     return _formValidations.isEmpty;

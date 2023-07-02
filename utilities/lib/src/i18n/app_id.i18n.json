@@ -24,5 +24,8 @@
         "messageTitle": "Buat akun",
         "messageDescription": "Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.",
         "button": "Daftar"
+    },
+    "formValidations": {
+        "emailNotValid": "Email tidak valid"
     }
 }

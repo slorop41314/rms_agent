@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:rms_agent/i18n/strings.g.dart';
 import 'package:rms_agent/src/components/shared/shared.dart';
 import 'package:rms_agent/src/routes/app_router.dart';
+import 'package:utilities/utilities.dart';
 
 @RoutePage()
 class MainDashboardScreen extends StatefulWidget {

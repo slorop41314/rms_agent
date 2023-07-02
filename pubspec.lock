@@ -923,7 +923,7 @@ packages:
     source: sdk
     version: "0.0.99"
   slang:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: slang
       sha256: "187e35d220765ff22be030b30506d1b8e0e94842a2c1801a6a2941c95db5a9eb"
@@ -931,7 +931,7 @@ packages:
     source: hosted
     version: "3.19.0"
   slang_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: slang_flutter
       sha256: c6c58162ef66fe88be0313d8062a39e98ae9b539dde7b35f59fa206eb4db2030

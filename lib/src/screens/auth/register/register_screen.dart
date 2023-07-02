@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:presenter/presenter.dart';
-import 'package:rms_agent/i18n/strings.g.dart';
 import 'package:rms_agent/src/components/extension/context_extension.dart';
 import 'package:rms_agent/src/components/shared/shared.dart';
 import 'package:rms_agent/src/routes/app_router.dart';
+import 'package:utilities/utilities.dart';
 
 @RoutePage()
 class RegisterScreen extends StatefulWidget implements AutoRouteWrapper {

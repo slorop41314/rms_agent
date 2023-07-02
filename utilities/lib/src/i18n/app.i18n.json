@@ -24,5 +24,8 @@
         "messageTitle": "Create an account",
         "messageDescription": "Let's get started by filling out the form. You can ask referral from your referree.",
         "button": "Register"
+    },
+    "formValidations": {
+        "emailNotValid": "Email is not valid"
     }
 }

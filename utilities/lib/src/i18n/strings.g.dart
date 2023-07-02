@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 32 (16 per locale)
+/// Strings: 34 (17 per locale)
 ///
-/// Built on 2023-07-02 at 13:09 UTC
+/// Built on 2023-07-02 at 13:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -156,6 +156,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	late final _StringsErrorEn error = _StringsErrorEn._(_root);
 	late final _StringsLoginEn login = _StringsLoginEn._(_root);
 	late final _StringsRegisterEn register = _StringsRegisterEn._(_root);
+	late final _StringsFormValidationsEn formValidations = _StringsFormValidationsEn._(_root);
 }
 
 // Path: menu
@@ -215,6 +216,16 @@ class _StringsRegisterEn {
 	String get button => 'Register';
 }
 
+// Path: formValidations
+class _StringsFormValidationsEn {
+	_StringsFormValidationsEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get emailNotValid => 'Email is not valid';
+}
+
 // Path: <root>
 class _StringsId implements _StringsEn {
 
@@ -249,6 +260,7 @@ class _StringsId implements _StringsEn {
 	@override late final _StringsErrorId error = _StringsErrorId._(_root);
 	@override late final _StringsLoginId login = _StringsLoginId._(_root);
 	@override late final _StringsRegisterId register = _StringsRegisterId._(_root);
+	@override late final _StringsFormValidationsId formValidations = _StringsFormValidationsId._(_root);
 }
 
 // Path: menu
@@ -308,6 +320,16 @@ class _StringsRegisterId implements _StringsRegisterEn {
 	@override String get button => 'Daftar';
 }
 
+// Path: formValidations
+class _StringsFormValidationsId implements _StringsFormValidationsEn {
+	_StringsFormValidationsId._(this._root);
+
+	@override final _StringsId _root; // ignore: unused_field
+
+	// Translations
+	@override String get emailNotValid => 'Email tidak valid';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -330,6 +352,7 @@ extension on _StringsEn {
 			case 'register.messageTitle': return 'Create an account';
 			case 'register.messageDescription': return 'Let\'s get started by filling out the form. You can ask referral from your referree.';
 			case 'register.button': return 'Register';
+			case 'formValidations.emailNotValid': return 'Email is not valid';
 			default: return null;
 		}
 	}
@@ -354,6 +377,7 @@ extension on _StringsId {
 			case 'register.messageTitle': return 'Buat akun';
 			case 'register.messageDescription': return 'Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.';
 			case 'register.button': return 'Daftar';
+			case 'formValidations.emailNotValid': return 'Email tidak valid';
 			default: return null;
 		}
 	}

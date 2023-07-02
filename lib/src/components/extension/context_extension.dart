@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rms_agent/i18n/strings.g.dart';
+import 'package:utilities/utilities.dart';
 
 extension BuildContextExtension on BuildContext {
   void showSnackbar(String message) {

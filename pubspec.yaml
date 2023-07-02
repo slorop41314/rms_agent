@@ -52,8 +52,6 @@ dependencies:
     path: ./data
   presenter:
     path: ./presenter
-  slang: ^3.19.0
-  slang_flutter: ^3.19.0
   utilities:
     path: ./utilities
 
