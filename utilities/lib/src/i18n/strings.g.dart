@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 34 (17 per locale)
+/// Strings: 42 (21 per locale)
 ///
-/// Built on 2023-07-02 at 13:38 UTC
+/// Built on 2023-07-02 at 14:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -147,6 +147,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	late final _StringsEn _root = this; // ignore: unused_field
 
 	// Translations
+	String get fullName => 'Full name';
 	String get email => 'Email';
 	String get password => 'Password';
 	String get confirmPassword => 'Confirm password';
@@ -177,6 +178,9 @@ class _StringsSettingsEn {
 	final _StringsEn _root; // ignore: unused_field
 
 	// Translations
+	String get yourAccount => 'Your account';
+	String get editProfile => 'Edit profile';
+	String get support => 'Support';
 	String get logout => 'Logout';
 }
 
@@ -251,6 +255,7 @@ class _StringsId implements _StringsEn {
 	@override late final _StringsId _root = this; // ignore: unused_field
 
 	// Translations
+	@override String get fullName => 'Nama lengkap';
 	@override String get email => 'Email';
 	@override String get password => 'Password';
 	@override String get confirmPassword => 'Konfirmasi password';
@@ -281,6 +286,9 @@ class _StringsSettingsId implements _StringsSettingsEn {
 	@override final _StringsId _root; // ignore: unused_field
 
 	// Translations
+	@override String get yourAccount => 'Akun kamu';
+	@override String get editProfile => 'Ubah profil';
+	@override String get support => 'Bantuan';
 	@override String get logout => 'Keluar';
 }
 
@@ -336,12 +344,16 @@ class _StringsFormValidationsId implements _StringsFormValidationsEn {
 extension on _StringsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'fullName': return 'Full name';
 			case 'email': return 'Email';
 			case 'password': return 'Password';
 			case 'confirmPassword': return 'Confirm password';
 			case 'referralCode': return 'Referral code';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Settings';
+			case 'settings.yourAccount': return 'Your account';
+			case 'settings.editProfile': return 'Edit profile';
+			case 'settings.support': return 'Support';
 			case 'settings.logout': return 'Logout';
 			case 'error.defaultMessage': return 'Error occured';
 			case 'login.messageTitle': return 'Welcome back';
@@ -361,12 +373,16 @@ extension on _StringsEn {
 extension on _StringsId {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'fullName': return 'Nama lengkap';
 			case 'email': return 'Email';
 			case 'password': return 'Password';
 			case 'confirmPassword': return 'Konfirmasi password';
 			case 'referralCode': return 'Kode referral';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Pengaturan';
+			case 'settings.yourAccount': return 'Akun kamu';
+			case 'settings.editProfile': return 'Ubah profil';
+			case 'settings.support': return 'Bantuan';
 			case 'settings.logout': return 'Keluar';
 			case 'error.defaultMessage': return 'Terjadi kesalahan';
 			case 'login.messageTitle': return 'Selamat datang';

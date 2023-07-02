@@ -34,11 +34,11 @@ class _MainDashboardScreenState extends State<MainDashboardScreen> {
             currentIndex: tabsRouter.activeIndex,
             items: [
               BottomNavigationBarItem(
-                icon: const Icon(Icons.audio_file),
+                icon: const Icon(Icons.home_outlined),
                 label: t.menu.home,
               ),
               BottomNavigationBarItem(
-                icon: const Icon(Icons.videocam_off),
+                icon: const Icon(Icons.settings_outlined),
                 label: t.menu.settings,
               ),
             ],

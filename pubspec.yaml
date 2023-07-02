@@ -54,6 +54,7 @@ dependencies:
     path: ./presenter
   utilities:
     path: ./utilities
+  shimmer: ^3.0.0
 
 dev_dependencies:
   auto_route_generator: ^7.1.1

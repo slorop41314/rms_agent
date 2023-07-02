@@ -34,6 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
   final TextEditingController _referralController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   @override
   void initState() {
@@ -73,6 +74,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 16,
               ),
               CustomInput(
+                label: t.fullName,
+                controller: _nameController,
+                errorMessage: formValidation['name'],
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              CustomInput(
                 label: t.email,
                 controller: _emailController,
                 errorMessage: formValidation['email'],
@@ -105,6 +114,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 onPressed: () {
                   _bloc.add(
                     RegisterEvent.registerButtonPressed(
+                      fullName: _nameController.text,
                       email: _emailController.text,
                       password: _passwordController.text,
                       confirmPassword: _confirmPasswordController.text,

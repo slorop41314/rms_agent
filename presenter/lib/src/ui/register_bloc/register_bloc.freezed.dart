@@ -774,7 +774,7 @@ mixin _$RegisterEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password,
+    required TResult Function(String fullName, String email, String password,
             String confirmPassword, String referral)
         registerButtonPressed,
   }) =>
@@ -782,16 +782,16 @@ mixin _$RegisterEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult? Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) =>
@@ -874,7 +874,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password,
+    required TResult Function(String fullName, String email, String password,
             String confirmPassword, String referral)
         registerButtonPressed,
   }) {
@@ -885,8 +885,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult? Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
   }) {
     return started?.call();
@@ -896,8 +896,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) {
@@ -951,7 +951,11 @@ abstract class _$$_RegisterButtonPressedCopyWith<$Res> {
       __$$_RegisterButtonPressedCopyWithImpl<$Res>;
   @useResult
   $Res call(
-      {String email, String password, String confirmPassword, String referral});
+      {String fullName,
+      String email,
+      String password,
+      String confirmPassword,
+      String referral});
 }
 
 /// @nodoc
@@ -965,12 +969,17 @@ class __$$_RegisterButtonPressedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? fullName = null,
     Object? email = null,
     Object? password = null,
     Object? confirmPassword = null,
     Object? referral = null,
   }) {
     return _then(_$_RegisterButtonPressed(
+      fullName: null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -995,11 +1004,14 @@ class __$$_RegisterButtonPressedCopyWithImpl<$Res>
 
 class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   const _$_RegisterButtonPressed(
-      {required this.email,
+      {required this.fullName,
+      required this.email,
       required this.password,
       required this.confirmPassword,
       required this.referral});
 
+  @override
+  final String fullName;
   @override
   final String email;
   @override
@@ -1011,7 +1023,7 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
 
   @override
   String toString() {
-    return 'RegisterEvent.registerButtonPressed(email: $email, password: $password, confirmPassword: $confirmPassword, referral: $referral)';
+    return 'RegisterEvent.registerButtonPressed(fullName: $fullName, email: $email, password: $password, confirmPassword: $confirmPassword, referral: $referral)';
   }
 
   @override
@@ -1019,6 +1031,8 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RegisterButtonPressed &&
+            (identical(other.fullName, fullName) ||
+                other.fullName == fullName) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
@@ -1029,8 +1043,8 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, email, password, confirmPassword, referral);
+  int get hashCode => Object.hash(
+      runtimeType, fullName, email, password, confirmPassword, referral);
 
   @JsonKey(ignore: true)
   @override
@@ -1043,36 +1057,38 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String email, String password,
+    required TResult Function(String fullName, String email, String password,
             String confirmPassword, String referral)
         registerButtonPressed,
   }) {
-    return registerButtonPressed(email, password, confirmPassword, referral);
+    return registerButtonPressed(
+        fullName, email, password, confirmPassword, referral);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult? Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
   }) {
     return registerButtonPressed?.call(
-        email, password, confirmPassword, referral);
+        fullName, email, password, confirmPassword, referral);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String email, String password, String confirmPassword,
-            String referral)?
+    TResult Function(String fullName, String email, String password,
+            String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) {
     if (registerButtonPressed != null) {
-      return registerButtonPressed(email, password, confirmPassword, referral);
+      return registerButtonPressed(
+          fullName, email, password, confirmPassword, referral);
     }
     return orElse();
   }
@@ -1112,11 +1128,13 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
 
 abstract class _RegisterButtonPressed implements RegisterEvent {
   const factory _RegisterButtonPressed(
-      {required final String email,
+      {required final String fullName,
+      required final String email,
       required final String password,
       required final String confirmPassword,
       required final String referral}) = _$_RegisterButtonPressed;
 
+  String get fullName;
   String get email;
   String get password;
   String get confirmPassword;

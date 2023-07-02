@@ -44,6 +44,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: BlocConsumer<SettingsBloc, SettingsState>(
         buildWhen: (_, currentState) => currentState.rebuild,
         builder: (context, state) => ListView(
+          padding: const EdgeInsets.all(24),
           children: [
             // Profile sections
             state.maybeMap(
@@ -51,18 +52,51 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: CircleAvatar(
+                        radius: 36,
+                      ),
+                    ),
+                    CustomGap.vLarge(),
                     Text(
                       loadedModel.profile.name,
                       style: CustomTextStyles.semibold16,
                     ),
+                    CustomGap.vMedium(),
+                    Text(
+                      loadedModel.profile.email,
+                      style: CustomTextStyles.regular12,
+                    ),
                   ],
                 );
               },
-              orElse: () => const SizedBox(),
+              orElse: () => const _LoadingProfileWidget(),
             ),
-            const SizedBox(
-              height: 16,
+            CustomGap.vLarge(),
+            ListTile(
+              title: Text(
+                t.settings.editProfile,
+                style: CustomTextStyles.regular16,
+              ),
+              contentPadding: const EdgeInsets.symmetric(vertical: 8),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                //
+              },
             ),
+            ListTile(
+              title: Text(
+                t.settings.support,
+                style: CustomTextStyles.regular16,
+              ),
+              contentPadding: const EdgeInsets.symmetric(vertical: 8),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                //
+              },
+            ),
+            CustomGap.vLarge(),
             Center(
               child: InkWell(
                 onTap: () {
@@ -88,5 +122,38 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   void _blocListener(BuildContext context, SettingsState state) {
     //
+  }
+}
+
+class _LoadingProfileWidget extends StatelessWidget {
+  const _LoadingProfileWidget();
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomShimmer(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: CircleAvatar(
+              radius: 36,
+            ),
+          ),
+          CustomGap.vMedium(),
+          Container(
+            color: Colors.white,
+            width: 250,
+            height: 16,
+          ),
+          CustomGap.vMedium(),
+          Container(
+            color: Colors.white,
+            width: 150,
+            height: 16,
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -5,7 +5,12 @@ import 'package:presenter/presenter.dart';
 import 'package:rms_agent/src/components/shared/app_theme.dart';
 import 'package:rms_agent/src/routes/app_router.dart';
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   final _appRouter = AppRouter();
 
   @override

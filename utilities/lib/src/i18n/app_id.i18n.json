@@ -1,4 +1,5 @@
 {
+    "fullName": "Nama lengkap",
     "email": "Email",
     "password": "Password",
     "confirmPassword": "Konfirmasi password",
@@ -8,6 +9,9 @@
         "settings": "Pengaturan"
     },
     "settings": {
+        "yourAccount": "Akun kamu",
+        "editProfile": "Ubah profil",
+        "support": "Bantuan",
         "logout": "Keluar"
     },
     "error": {

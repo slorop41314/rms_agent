@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jiffy/jiffy.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 part 'custom_app_bar.dart';
@@ -14,6 +15,7 @@ part 'custom_input.dart';
 part 'custom_rich_text.dart';
 part 'custom_right_select.dart';
 part 'custom_sheet.dart';
+part 'custom_shimmer.dart';
 part 'custom_tap_scale.dart';
 part 'custom_time_picker.dart';
 part 'loading_indicator.dart';
