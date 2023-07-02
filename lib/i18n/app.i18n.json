@@ -1,6 +1,8 @@
 {
     "email": "Email",
     "password": "Password",
+    "confirmPassword": "Confirm password",
+    "referralCode": "Referral code",
     "menu": {
         "home": "Home",
         "settings": "Settings"
@@ -12,7 +14,15 @@
         "defaultMessage": "Error occured"
     },
     "login": {
-        "message": "Hello login",
-        "button": "Login"
+        "messageTitle": "Welcome back",
+        "messageDescription": "Fill out information below in order to access your account.",
+        "button": "Login",
+        "dontHaveAccount": "Don't have an account?",
+        "createAccount": "Create account"
+    },
+    "register": {
+        "messageTitle": "Create an account",
+        "messageDescription": "Let's get started by filling out the form. You can ask referral from your referree.",
+        "button": "Register"
     }
 }

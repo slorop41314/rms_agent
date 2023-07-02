@@ -20,4 +20,6 @@ class AppConstant {
 
   static bool get isDev => env == 'dev';
   static bool get isProd => env == 'prod';
+
+  static const String defaultLocale = 'en_EN';
 }

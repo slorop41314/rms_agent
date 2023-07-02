@@ -1,6 +1,8 @@
 {
     "email": "Email",
     "password": "Password",
+    "confirmPassword": "Konfirmasi password",
+    "referralCode": "Kode referral",
     "menu": {
         "home": "Home",
         "settings": "Pengaturan"
@@ -12,7 +14,15 @@
         "defaultMessage": "Terjadi kesalahan"
     },
     "login": {
-        "message": "Halo masuk",
-        "button": "Masuk"
+        "messageTitle": "Selamat datang",
+        "messageDescription": "Isi data di bawah untuk mengakses akun Anda.",
+        "button": "Masuk",
+        "dontHaveAccount": "Belum punya akun?",
+        "createAccount": "Buat akun"
+    },
+    "register": {
+        "messageTitle": "Buat akun",
+        "messageDescription": "Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.",
+        "button": "Daftar"
     }
 }

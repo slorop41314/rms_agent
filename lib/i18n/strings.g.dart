@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 16 (8 per locale)
+/// Strings: 32 (16 per locale)
 ///
-/// Built on 2023-07-02 at 09:39 UTC
+/// Built on 2023-07-02 at 13:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -149,10 +149,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	// Translations
 	String get email => 'Email';
 	String get password => 'Password';
+	String get confirmPassword => 'Confirm password';
+	String get referralCode => 'Referral code';
 	late final _StringsMenuEn menu = _StringsMenuEn._(_root);
 	late final _StringsSettingsEn settings = _StringsSettingsEn._(_root);
 	late final _StringsErrorEn error = _StringsErrorEn._(_root);
 	late final _StringsLoginEn login = _StringsLoginEn._(_root);
+	late final _StringsRegisterEn register = _StringsRegisterEn._(_root);
 }
 
 // Path: menu
@@ -193,8 +196,23 @@ class _StringsLoginEn {
 	final _StringsEn _root; // ignore: unused_field
 
 	// Translations
-	String get message => 'Hello login';
+	String get messageTitle => 'Welcome back';
+	String get messageDescription => 'Fill out information below in order to access your account.';
 	String get button => 'Login';
+	String get dontHaveAccount => 'Don\'t have an account?';
+	String get createAccount => 'Create account';
+}
+
+// Path: register
+class _StringsRegisterEn {
+	_StringsRegisterEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get messageTitle => 'Create an account';
+	String get messageDescription => 'Let\'s get started by filling out the form. You can ask referral from your referree.';
+	String get button => 'Register';
 }
 
 // Path: <root>
@@ -224,10 +242,13 @@ class _StringsId implements _StringsEn {
 	// Translations
 	@override String get email => 'Email';
 	@override String get password => 'Password';
+	@override String get confirmPassword => 'Konfirmasi password';
+	@override String get referralCode => 'Kode referral';
 	@override late final _StringsMenuId menu = _StringsMenuId._(_root);
 	@override late final _StringsSettingsId settings = _StringsSettingsId._(_root);
 	@override late final _StringsErrorId error = _StringsErrorId._(_root);
 	@override late final _StringsLoginId login = _StringsLoginId._(_root);
+	@override late final _StringsRegisterId register = _StringsRegisterId._(_root);
 }
 
 // Path: menu
@@ -268,8 +289,23 @@ class _StringsLoginId implements _StringsLoginEn {
 	@override final _StringsId _root; // ignore: unused_field
 
 	// Translations
-	@override String get message => 'Halo masuk';
+	@override String get messageTitle => 'Selamat datang';
+	@override String get messageDescription => 'Isi data di bawah untuk mengakses akun Anda.';
 	@override String get button => 'Masuk';
+	@override String get dontHaveAccount => 'Belum punya akun?';
+	@override String get createAccount => 'Buat akun';
+}
+
+// Path: register
+class _StringsRegisterId implements _StringsRegisterEn {
+	_StringsRegisterId._(this._root);
+
+	@override final _StringsId _root; // ignore: unused_field
+
+	// Translations
+	@override String get messageTitle => 'Buat akun';
+	@override String get messageDescription => 'Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.';
+	@override String get button => 'Daftar';
 }
 
 /// Flat map(s) containing all translations.
@@ -280,12 +316,20 @@ extension on _StringsEn {
 		switch (path) {
 			case 'email': return 'Email';
 			case 'password': return 'Password';
+			case 'confirmPassword': return 'Confirm password';
+			case 'referralCode': return 'Referral code';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Settings';
 			case 'settings.logout': return 'Logout';
 			case 'error.defaultMessage': return 'Error occured';
-			case 'login.message': return 'Hello login';
+			case 'login.messageTitle': return 'Welcome back';
+			case 'login.messageDescription': return 'Fill out information below in order to access your account.';
 			case 'login.button': return 'Login';
+			case 'login.dontHaveAccount': return 'Don\'t have an account?';
+			case 'login.createAccount': return 'Create account';
+			case 'register.messageTitle': return 'Create an account';
+			case 'register.messageDescription': return 'Let\'s get started by filling out the form. You can ask referral from your referree.';
+			case 'register.button': return 'Register';
 			default: return null;
 		}
 	}
@@ -296,12 +340,20 @@ extension on _StringsId {
 		switch (path) {
 			case 'email': return 'Email';
 			case 'password': return 'Password';
+			case 'confirmPassword': return 'Konfirmasi password';
+			case 'referralCode': return 'Kode referral';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Pengaturan';
 			case 'settings.logout': return 'Keluar';
 			case 'error.defaultMessage': return 'Terjadi kesalahan';
-			case 'login.message': return 'Halo masuk';
+			case 'login.messageTitle': return 'Selamat datang';
+			case 'login.messageDescription': return 'Isi data di bawah untuk mengakses akun Anda.';
 			case 'login.button': return 'Masuk';
+			case 'login.dontHaveAccount': return 'Belum punya akun?';
+			case 'login.createAccount': return 'Buat akun';
+			case 'register.messageTitle': return 'Buat akun';
+			case 'register.messageDescription': return 'Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.';
+			case 'register.button': return 'Daftar';
 			default: return null;
 		}
 	}

@@ -21,11 +21,17 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<_LoginButtonPressed>(_mapLoginButtonPressedEventToState);
   }
 
+  final _formValidations = <String, String>{};
+
   FutureOr<void> _mapStartedEventToState(
     _Started event,
     Emitter<LoginState> emit,
   ) async {
-    //
+    emit(
+      LoginState.loaded(
+        formValidation: _formValidations,
+      ),
+    );
   }
 
   FutureOr<void> _mapLoginButtonPressedEventToState(
@@ -34,17 +40,37 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   ) async {
     emit(const LoginState.loading());
     try {
+      if (!_validateForm(event)) {
+        emit(
+          LoginState.loaded(
+            formValidation: _formValidations,
+          ),
+        );
+        return;
+      }
       await _loginWithEmailUseCase.execute(
         event.email,
         event.password,
       );
 
-      emit(const LoginState.success());
+      emit(
+        const LoginState.success(),
+      );
     } on AuthException catch (exc) {
       emit(LoginState.error(errorMessage: exc.message));
     } catch (err) {
       emit(const LoginState.error());
     }
-    //
+  }
+
+  bool _validateForm(_LoginButtonPressed event) {
+    _formValidations.clear();
+    if (event.email.isEmpty) {
+      _formValidations['email'] = 'Email is not valid';
+    }
+    if (event.password.isEmpty) {
+      _formValidations['password'] = 'Password is not valid';
+    }
+    return _formValidations.isEmpty;
   }
 }

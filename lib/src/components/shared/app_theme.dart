@@ -7,7 +7,9 @@ ThemeData appTheme() {
   return ThemeData(
     fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
     appBarTheme: const AppBarTheme(
-      elevation: 1,
+      actionsIconTheme: IconThemeData(
+        color: Colors.black,
+      ),
       iconTheme: IconThemeData(
         color: Colors.black,
       ),
