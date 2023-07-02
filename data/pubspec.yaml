@@ -22,6 +22,7 @@ dependencies:
     path: ../domain
   supabase_flutter: ^1.10.6
   rxdart: ^0.27.7
+  uuid: ^3.0.7
 
 dev_dependencies:
   drift_dev: ^2.9.0

@@ -110,7 +110,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               CustomButton(
                 isLoading: _isLoading,
                 label: t.register.button,
-                isDisabled: true,
                 onPressed: () {
                   _bloc.add(
                     RegisterEvent.registerButtonPressed(

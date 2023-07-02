@@ -36,6 +36,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
         SettingsState.loaded(profile: res),
       );
     } catch (err) {
+      print(err);
       //
     }
   }

@@ -16,6 +16,8 @@ import 'package:domain/src/use_case/auth/listen_auth_event_change_use_case.dart'
     as _i6;
 import 'package:domain/src/use_case/auth/login_with_email_use_case.dart' as _i7;
 import 'package:domain/src/use_case/auth/logout_use_case.dart' as _i8;
+import 'package:domain/src/use_case/auth/register_with_email_use_case.dart'
+    as _i9;
 import 'package:domain/src/use_case/reseller/get_current_reseller_profile_use_case.dart'
     as _i5;
 import 'package:get_it/get_it.dart' as _i1;
@@ -45,6 +47,10 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i7.LoginWithEmailUseCase(gh<_i4.AuthRepository>()));
     gh.factory<_i8.LogoutUseCase>(
         () => _i8.LogoutUseCase(gh<_i4.AuthRepository>()));
+    gh.factory<_i9.RegisterWithEmailUseCase>(() => _i9.RegisterWithEmailUseCase(
+          gh<_i4.AuthRepository>(),
+          gh<_i4.ResellerRepository>(),
+        ));
     return this;
   }
 }

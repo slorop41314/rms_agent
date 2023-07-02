@@ -14,4 +14,20 @@ class ResellerRepositoryImpl implements ResellerRepository {
   Future<ResellerModel> getProfile(String userId) {
     return _resellerRemote.getProfile(userId);
   }
+
+  @override
+  Future<void> addProfile(
+    String userId,
+    RegisterRequestModel registerModel,
+  ) {
+    return _resellerRemote.addProfile(
+      userId,
+      registerModel,
+    );
+  }
+
+  @override
+  Future<void> updateProfile(ResellerModel profileModel) {
+    return _resellerRemote.updateResellerData(profileModel);
+  }
 }

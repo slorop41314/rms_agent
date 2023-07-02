@@ -33,7 +33,8 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i3.LoginBloc(gh<_i4.LoginWithEmailUseCase>()));
     gh.factory<_i5.MainAppBloc>(
         () => _i5.MainAppBloc(gh<_i4.ListenAuthEventChangeUseCase>()));
-    gh.factory<_i6.RegisterBloc>(() => _i6.RegisterBloc());
+    gh.factory<_i6.RegisterBloc>(
+        () => _i6.RegisterBloc(gh<_i4.RegisterWithEmailUseCase>()));
     gh.factory<_i7.SettingsBloc>(() => _i7.SettingsBloc(
           gh<_i4.GetCurrentResellerProfileUseCase>(),
           gh<_i4.LogoutUseCase>(),

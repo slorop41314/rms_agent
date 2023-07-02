@@ -12,10 +12,10 @@ part 'register_bloc.freezed.dart';
 
 @injectable
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  // final RegisterWithEmailUseCase _registerWithEmailUseCase;
+  final RegisterWithEmailUseCase _registerWithEmailUseCase;
 
   RegisterBloc(
-    // this._registerWithEmailUseCase,
+    this._registerWithEmailUseCase,
   ) : super(const RegisterState.initial()) {
     on<_Started>(_mapStartedEventToState);
     on<_RegisterButtonPressed>(_mapRegisterButtonPressedEventToState);
@@ -40,10 +40,15 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   ) async {
     emit(const RegisterState.loading());
     try {
-      // await _registerWithEmailUseCase.execute(
-      //   event.email,
-      //   event.password,
-      // );
+      final registerModel = RegisterRequestModel(
+        referralCode: event.referral,
+        fullName: event.fullName,
+        email: event.email,
+        password: event.password,
+      );
+      await _registerWithEmailUseCase.execute(
+        registerModel,
+      );
 
       emit(
         const RegisterState.success(),
@@ -51,6 +56,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     } on AuthException catch (exc) {
       emit(RegisterState.error(errorMessage: exc.message));
     } catch (err) {
+      print(err);
       emit(const RegisterState.error());
     }
     //

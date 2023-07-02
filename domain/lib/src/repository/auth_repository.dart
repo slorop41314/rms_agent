@@ -5,9 +5,14 @@ abstract class AuthRepository {
     String email,
     String password,
   );
+  
+  Future<AuthResponse> registerWithEmail(
+    String email,
+    String password,
+  );
 
   Stream<AuthState> listenAuthEventChanges();
-  
+
   Future<User?> getUserAuth();
 
   Future<void> logout();
