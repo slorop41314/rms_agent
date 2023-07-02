@@ -1,15 +1,16 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:rms_agent/i18n/strings.g.dart';
-import 'package:rms_agent/src/components/extension/context_extension.dart';
-import 'package:rms_agent/src/components/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:presenter/presenter.dart';
+import 'package:rms_agent/i18n/strings.g.dart';
+import 'package:rms_agent/src/components/extension/context_extension.dart';
+import 'package:rms_agent/src/components/shared/shared.dart';
 import 'package:rms_agent/src/routes/app_router.dart';
 
 @RoutePage()
 class LoginScreen extends StatefulWidget implements AutoRouteWrapper {
+  static const route = '/auth/login';
   const LoginScreen({super.key});
 
   @override
@@ -92,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
     state.maybeWhen(
       success: () {
         context.router.pushAndPopUntil(
-          MainDashboardRoute(),
+          const MainDashboardRoute(),
           predicate: (_) => false,
         );
       },

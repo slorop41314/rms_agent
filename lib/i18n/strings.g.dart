@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 10 (5 per locale)
+/// Strings: 16 (8 per locale)
 ///
-/// Built on 2023-07-02 at 04:47 UTC
+/// Built on 2023-07-02 at 09:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -149,8 +149,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	// Translations
 	String get email => 'Email';
 	String get password => 'Password';
+	late final _StringsMenuEn menu = _StringsMenuEn._(_root);
+	late final _StringsSettingsEn settings = _StringsSettingsEn._(_root);
 	late final _StringsErrorEn error = _StringsErrorEn._(_root);
 	late final _StringsLoginEn login = _StringsLoginEn._(_root);
+}
+
+// Path: menu
+class _StringsMenuEn {
+	_StringsMenuEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get home => 'Home';
+	String get settings => 'Settings';
+}
+
+// Path: settings
+class _StringsSettingsEn {
+	_StringsSettingsEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get logout => 'Logout';
 }
 
 // Path: error
@@ -201,8 +224,31 @@ class _StringsId implements _StringsEn {
 	// Translations
 	@override String get email => 'Email';
 	@override String get password => 'Password';
+	@override late final _StringsMenuId menu = _StringsMenuId._(_root);
+	@override late final _StringsSettingsId settings = _StringsSettingsId._(_root);
 	@override late final _StringsErrorId error = _StringsErrorId._(_root);
 	@override late final _StringsLoginId login = _StringsLoginId._(_root);
+}
+
+// Path: menu
+class _StringsMenuId implements _StringsMenuEn {
+	_StringsMenuId._(this._root);
+
+	@override final _StringsId _root; // ignore: unused_field
+
+	// Translations
+	@override String get home => 'Home';
+	@override String get settings => 'Pengaturan';
+}
+
+// Path: settings
+class _StringsSettingsId implements _StringsSettingsEn {
+	_StringsSettingsId._(this._root);
+
+	@override final _StringsId _root; // ignore: unused_field
+
+	// Translations
+	@override String get logout => 'Keluar';
 }
 
 // Path: error
@@ -234,6 +280,9 @@ extension on _StringsEn {
 		switch (path) {
 			case 'email': return 'Email';
 			case 'password': return 'Password';
+			case 'menu.home': return 'Home';
+			case 'menu.settings': return 'Settings';
+			case 'settings.logout': return 'Logout';
 			case 'error.defaultMessage': return 'Error occured';
 			case 'login.message': return 'Hello login';
 			case 'login.button': return 'Login';
@@ -247,6 +296,9 @@ extension on _StringsId {
 		switch (path) {
 			case 'email': return 'Email';
 			case 'password': return 'Password';
+			case 'menu.home': return 'Home';
+			case 'menu.settings': return 'Pengaturan';
+			case 'settings.logout': return 'Keluar';
 			case 'error.defaultMessage': return 'Terjadi kesalahan';
 			case 'login.message': return 'Halo masuk';
 			case 'login.button': return 'Masuk';

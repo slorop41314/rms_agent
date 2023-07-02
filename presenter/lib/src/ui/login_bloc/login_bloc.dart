@@ -16,7 +16,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   LoginBloc(
     this._loginWithEmailUseCase,
-  ) : super(LoginState.initial()) {
+  ) : super(const LoginState.initial()) {
     on<_Started>(_mapStartedEventToState);
     on<_LoginButtonPressed>(_mapLoginButtonPressedEventToState);
   }
@@ -32,18 +32,18 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     _LoginButtonPressed event,
     Emitter<LoginState> emit,
   ) async {
-    emit(LoginState.loading());
+    emit(const LoginState.loading());
     try {
       await _loginWithEmailUseCase.execute(
         event.email,
         event.password,
       );
 
-      emit(LoginState.success());
+      emit(const LoginState.success());
     } on AuthException catch (exc) {
       emit(LoginState.error(errorMessage: exc.message));
     } catch (err) {
-      emit(LoginState.error());
+      emit(const LoginState.error());
     }
     //
   }

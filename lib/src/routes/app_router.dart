@@ -13,9 +13,15 @@ class AppRouter extends _$AppRouter {
         ),
         AutoRoute(
           page: LoginRoute.page,
+          path: LoginScreen.route,
         ),
         AutoRoute(
           page: MainDashboardRoute.page,
+          path: MainDashboardScreen.route,
+          children: [
+            AutoRoute(path: HomeScreen.route, page: HomeRoute.page),
+            AutoRoute(path: SettingsScreen.route, page: SettingsRoute.page),
+          ],
         ),
       ];
 }

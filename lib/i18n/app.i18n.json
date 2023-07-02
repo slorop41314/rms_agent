@@ -1,6 +1,13 @@
 {
     "email": "Email",
     "password": "Password",
+    "menu": {
+        "home": "Home",
+        "settings": "Settings"
+    },
+    "settings": {
+        "logout": "Logout"
+    },
     "error": {
         "defaultMessage": "Error occured"
     },

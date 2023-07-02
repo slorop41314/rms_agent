@@ -22,4 +22,8 @@ class AuthRemote {
   Future<User?> getUserAuth() async {
     return _sb.auth.currentUser;
   }
+
+  Future<void> logout() async {
+    return _sb.auth.signOut();
+  }
 }

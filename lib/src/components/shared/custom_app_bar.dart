@@ -19,13 +19,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(
-        title.toUpperCase(),
+        title,
         style: CustomTextStyles.semibold16,
       ),
       // centerTitle: true,
       backgroundColor: Colors.white,
       leading: leading,
       actions: trailing,
+      elevation: 0,
     );
   }
 }

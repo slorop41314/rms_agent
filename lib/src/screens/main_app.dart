@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return BlocProvider<MainAppBloc>(
       create: (_) => GetIt.I.get()
         ..add(
-          MainAppEvent.started(),
+          const MainAppEvent.started(),
         ),
       child: BlocListener<MainAppBloc, MainAppState>(
         listener: _listener,
@@ -27,8 +27,8 @@ class MainApp extends StatelessWidget {
   void _listener(BuildContext context, MainAppState state) {
     state.maybeWhen(
       authExpired: () {
-        context.router.pushAndPopUntil(
-          LoginRoute(),
+        _appRouter.pushAndPopUntil(
+          const LoginRoute(),
           predicate: (_) => false,
         );
       },

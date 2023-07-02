@@ -12,11 +12,11 @@ class SplashScreen extends StatelessWidget {
     return BlocProvider<SplashBloc>(
       create: (_) => GetIt.I.get()
         ..add(
-          SplashEvent.started(),
+          const SplashEvent.started(),
         ),
       child: BlocListener<SplashBloc, SplashState>(
         listener: _listener,
-        child: Scaffold(
+        child: const Scaffold(
           body: Center(
             child: Text(
               'IDFlow',
@@ -31,13 +31,13 @@ class SplashScreen extends StatelessWidget {
     state.maybeWhen(
       authenticated: () {
         context.router.pushAndPopUntil(
-          MainDashboardRoute(),
+          const MainDashboardRoute(),
           predicate: (_) => false,
         );
       },
       unauthenticated: () {
         context.router.pushAndPopUntil(
-          LoginRoute(),
+          const LoginRoute(),
           predicate: (_) => false,
         );
       },

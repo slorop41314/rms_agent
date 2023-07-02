@@ -16,7 +16,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
 
   SplashBloc(
     this._getCurrentAuthUserUseCase,
-  ) : super(SplashState.initial()) {
+  ) : super(const SplashState.initial()) {
     on<_Started>(_mapStartedEventToState);
   }
 
@@ -25,10 +25,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     if (await _getCurrentAuthUserUseCase.execute() != null) {
-      emit(SplashState.authenticated());
+      emit(const SplashState.authenticated());
       return;
     }
 
-    emit(SplashState.unauthenticated());
+    emit(const SplashState.unauthenticated());
   }
 }

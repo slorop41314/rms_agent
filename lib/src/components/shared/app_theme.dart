@@ -1,13 +1,12 @@
-import 'package:rms_agent/src/components/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rms_agent/src/components/shared/shared.dart';
 
 ThemeData appTheme() {
   return ThemeData(
     fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
     appBarTheme: const AppBarTheme(
-      // color: Colors.black,
       elevation: 1,
       iconTheme: IconThemeData(
         color: Colors.black,

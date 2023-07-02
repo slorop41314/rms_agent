@@ -9,4 +9,6 @@ abstract class AuthRepository {
   Stream<AuthState> listenAuthEventChanges();
   
   Future<User?> getUserAuth();
+
+  Future<void> logout();
 }

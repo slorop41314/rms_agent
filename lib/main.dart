@@ -1,8 +1,9 @@
-import 'package:rms_agent/i18n/strings.g.dart';
 import 'package:data/data.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:presenter/presenter.dart';
+import 'package:rms_agent/i18n/strings.g.dart';
+import 'package:rms_agent/src/components/shared/app_theme.dart';
 import 'package:rms_agent/src/screens/main_app.dart';
 
 void main() async {
@@ -23,9 +24,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bloc Boilerplate',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: appTheme(),
       home: MainApp(),
     );
   }

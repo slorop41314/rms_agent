@@ -24,4 +24,9 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<User?> getUserAuth() {
     return _authRemote.getUserAuth();
   }
+  
+  @override
+  Future<void> logout() {
+    return _authRemote.logout();
+  }
 }
