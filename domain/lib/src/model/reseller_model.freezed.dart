@@ -36,12 +36,10 @@ mixin _$ResellerModel {
   String? get referredBy => throw _privateConstructorUsedError;
   @JsonKey(name: 'referral_code')
   String? get referralCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'referral_link')
-  String? get referralLink => throw _privateConstructorUsedError;
-  @JsonKey(name: 'referred_resellers')
-  List<String>? get referredResellers => throw _privateConstructorUsedError;
   @JsonKey(name: 'default_password')
   bool get defaultPassword => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_approved')
+  bool get isApproved => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,9 +65,8 @@ abstract class $ResellerModelCopyWith<$Res> {
       bool? active,
       @JsonKey(name: 'referred_by') String? referredBy,
       @JsonKey(name: 'referral_code') String? referralCode,
-      @JsonKey(name: 'referral_link') String? referralLink,
-      @JsonKey(name: 'referred_resellers') List<String>? referredResellers,
-      @JsonKey(name: 'default_password') bool defaultPassword});
+      @JsonKey(name: 'default_password') bool defaultPassword,
+      @JsonKey(name: 'is_approved') bool isApproved});
 }
 
 /// @nodoc
@@ -96,9 +93,8 @@ class _$ResellerModelCopyWithImpl<$Res, $Val extends ResellerModel>
     Object? active = freezed,
     Object? referredBy = freezed,
     Object? referralCode = freezed,
-    Object? referralLink = freezed,
-    Object? referredResellers = freezed,
     Object? defaultPassword = null,
+    Object? isApproved = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -145,17 +141,13 @@ class _$ResellerModelCopyWithImpl<$Res, $Val extends ResellerModel>
           ? _value.referralCode
           : referralCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      referralLink: freezed == referralLink
-          ? _value.referralLink
-          : referralLink // ignore: cast_nullable_to_non_nullable
-              as String?,
-      referredResellers: freezed == referredResellers
-          ? _value.referredResellers
-          : referredResellers // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       defaultPassword: null == defaultPassword
           ? _value.defaultPassword
           : defaultPassword // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isApproved: null == isApproved
+          ? _value.isApproved
+          : isApproved // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -181,9 +173,8 @@ abstract class _$$_ResellerModelCopyWith<$Res>
       bool? active,
       @JsonKey(name: 'referred_by') String? referredBy,
       @JsonKey(name: 'referral_code') String? referralCode,
-      @JsonKey(name: 'referral_link') String? referralLink,
-      @JsonKey(name: 'referred_resellers') List<String>? referredResellers,
-      @JsonKey(name: 'default_password') bool defaultPassword});
+      @JsonKey(name: 'default_password') bool defaultPassword,
+      @JsonKey(name: 'is_approved') bool isApproved});
 }
 
 /// @nodoc
@@ -208,9 +199,8 @@ class __$$_ResellerModelCopyWithImpl<$Res>
     Object? active = freezed,
     Object? referredBy = freezed,
     Object? referralCode = freezed,
-    Object? referralLink = freezed,
-    Object? referredResellers = freezed,
     Object? defaultPassword = null,
+    Object? isApproved = null,
   }) {
     return _then(_$_ResellerModel(
       id: null == id
@@ -257,17 +247,13 @@ class __$$_ResellerModelCopyWithImpl<$Res>
           ? _value.referralCode
           : referralCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      referralLink: freezed == referralLink
-          ? _value.referralLink
-          : referralLink // ignore: cast_nullable_to_non_nullable
-              as String?,
-      referredResellers: freezed == referredResellers
-          ? _value._referredResellers
-          : referredResellers // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       defaultPassword: null == defaultPassword
           ? _value.defaultPassword
           : defaultPassword // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isApproved: null == isApproved
+          ? _value.isApproved
+          : isApproved // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -288,11 +274,8 @@ class _$_ResellerModel implements _ResellerModel {
       this.active,
       @JsonKey(name: 'referred_by') this.referredBy,
       @JsonKey(name: 'referral_code') this.referralCode,
-      @JsonKey(name: 'referral_link') this.referralLink,
-      @JsonKey(name: 'referred_resellers')
-      final List<String>? referredResellers,
-      @JsonKey(name: 'default_password') required this.defaultPassword})
-      : _referredResellers = referredResellers;
+      @JsonKey(name: 'default_password') required this.defaultPassword,
+      @JsonKey(name: 'is_approved') required this.isApproved});
 
   factory _$_ResellerModel.fromJson(Map<String, dynamic> json) =>
       _$$_ResellerModelFromJson(json);
@@ -325,27 +308,15 @@ class _$_ResellerModel implements _ResellerModel {
   @JsonKey(name: 'referral_code')
   final String? referralCode;
   @override
-  @JsonKey(name: 'referral_link')
-  final String? referralLink;
-  final List<String>? _referredResellers;
-  @override
-  @JsonKey(name: 'referred_resellers')
-  List<String>? get referredResellers {
-    final value = _referredResellers;
-    if (value == null) return null;
-    if (_referredResellers is EqualUnmodifiableListView)
-      return _referredResellers;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
   @JsonKey(name: 'default_password')
   final bool defaultPassword;
+  @override
+  @JsonKey(name: 'is_approved')
+  final bool isApproved;
 
   @override
   String toString() {
-    return 'ResellerModel(id: $id, name: $name, email: $email, userId: $userId, phone: $phone, address: $address, joinDate: $joinDate, lastOrderDate: $lastOrderDate, active: $active, referredBy: $referredBy, referralCode: $referralCode, referralLink: $referralLink, referredResellers: $referredResellers, defaultPassword: $defaultPassword)';
+    return 'ResellerModel(id: $id, name: $name, email: $email, userId: $userId, phone: $phone, address: $address, joinDate: $joinDate, lastOrderDate: $lastOrderDate, active: $active, referredBy: $referredBy, referralCode: $referralCode, defaultPassword: $defaultPassword, isApproved: $isApproved)';
   }
 
   @override
@@ -368,12 +339,10 @@ class _$_ResellerModel implements _ResellerModel {
                 other.referredBy == referredBy) &&
             (identical(other.referralCode, referralCode) ||
                 other.referralCode == referralCode) &&
-            (identical(other.referralLink, referralLink) ||
-                other.referralLink == referralLink) &&
-            const DeepCollectionEquality()
-                .equals(other._referredResellers, _referredResellers) &&
             (identical(other.defaultPassword, defaultPassword) ||
-                other.defaultPassword == defaultPassword));
+                other.defaultPassword == defaultPassword) &&
+            (identical(other.isApproved, isApproved) ||
+                other.isApproved == isApproved));
   }
 
   @JsonKey(ignore: true)
@@ -391,9 +360,8 @@ class _$_ResellerModel implements _ResellerModel {
       active,
       referredBy,
       referralCode,
-      referralLink,
-      const DeepCollectionEquality().hash(_referredResellers),
-      defaultPassword);
+      defaultPassword,
+      isApproved);
 
   @JsonKey(ignore: true)
   @override
@@ -422,11 +390,9 @@ abstract class _ResellerModel implements ResellerModel {
       final bool? active,
       @JsonKey(name: 'referred_by') final String? referredBy,
       @JsonKey(name: 'referral_code') final String? referralCode,
-      @JsonKey(name: 'referral_link') final String? referralLink,
-      @JsonKey(name: 'referred_resellers')
-      final List<String>? referredResellers,
-      @JsonKey(name: 'default_password')
-      required final bool defaultPassword}) = _$_ResellerModel;
+      @JsonKey(name: 'default_password') required final bool defaultPassword,
+      @JsonKey(name: 'is_approved')
+      required final bool isApproved}) = _$_ResellerModel;
 
   factory _ResellerModel.fromJson(Map<String, dynamic> json) =
       _$_ResellerModel.fromJson;
@@ -459,14 +425,11 @@ abstract class _ResellerModel implements ResellerModel {
   @JsonKey(name: 'referral_code')
   String? get referralCode;
   @override
-  @JsonKey(name: 'referral_link')
-  String? get referralLink;
-  @override
-  @JsonKey(name: 'referred_resellers')
-  List<String>? get referredResellers;
-  @override
   @JsonKey(name: 'default_password')
   bool get defaultPassword;
+  @override
+  @JsonKey(name: 'is_approved')
+  bool get isApproved;
   @override
   @JsonKey(ignore: true)
   _$$_ResellerModelCopyWith<_$_ResellerModel> get copyWith =>

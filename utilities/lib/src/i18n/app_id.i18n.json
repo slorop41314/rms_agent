@@ -4,6 +4,9 @@
     "password": "Password",
     "confirmPassword": "Konfirmasi password",
     "referralCode": "Kode referral",
+    "phoneNumber": "No telepon",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
     "menu": {
         "home": "Home",
         "settings": "Pengaturan"
@@ -27,9 +30,16 @@
     "register": {
         "messageTitle": "Buat akun",
         "messageDescription": "Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.",
-        "button": "Daftar"
+        "button": "Daftar",
+        "referralNotFound": "Referral code tidak ditemukan. Input ulang atau hapus referral code untuk melanjutkan",
+        "referralInformation": "Informasi Referral"
     },
     "formValidations": {
-        "emailNotValid": "Email tidak valid"
+        "fieldParamNotValid": "{label} tidak valid",
+        "passwordMinLength": "Minimal panjang password adalah 8",
+        "passwordContainSpaces": "Password tidak boleh mengandung spasi",
+        "confirmPasswordNotEqual": "Password dan konfirmasi password tidak sama",
+        "fieldCannotBeEmpty": "Input tidak boleh kosong",
+        "fieldParamCannotBeEmpty": "{label} tidak boleh kosong"
     }
 }

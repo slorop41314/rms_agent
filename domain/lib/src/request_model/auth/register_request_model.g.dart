@@ -14,6 +14,10 @@ _$_RegisterRequestModel _$$_RegisterRequestModelFromJson(
       password: json['password'] as String,
       referralCode: json['referralCode'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
+      referredByUser: json['referredByUser'] == null
+          ? null
+          : ResellerModel.fromJson(
+              json['referredByUser'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RegisterRequestModelToJson(
@@ -24,4 +28,5 @@ Map<String, dynamic> _$$_RegisterRequestModelToJson(
       'password': instance.password,
       'referralCode': instance.referralCode,
       'phoneNumber': instance.phoneNumber,
+      'referredByUser': instance.referredByUser,
     };

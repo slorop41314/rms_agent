@@ -66,12 +66,13 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   bool _validateForm(_LoginButtonPressed event) {
     _formValidations.clear();
-    if (event.email.isEmpty) {
-      _formValidations['email'] = t.formValidations.emailNotValid;
+    final isEmailValid = FormValidationUtils.isEmail(event.email);
+    if (isEmailValid != null) {
+      _formValidations['email'] = isEmailValid;
     }
-    if (event.password.isEmpty) {
-      // TODO(alb): add translations
-      _formValidations['password'] = 'Password is not valid';
+    final isPasswordValid = FormValidationUtils.isPassword(event.password);
+    if (isPasswordValid != null) {
+      _formValidations['password'] = isPasswordValid;
     }
     return _formValidations.isEmpty;
   }

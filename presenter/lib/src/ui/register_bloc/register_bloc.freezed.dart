@@ -23,6 +23,7 @@ mixin _$RegisterState {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +33,7 @@ mixin _$RegisterState {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,7 @@ mixin _$RegisterState {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,7 @@ mixin _$RegisterState {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,7 @@ mixin _$RegisterState {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +74,7 @@ mixin _$RegisterState {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +140,7 @@ class _$_Initial extends _Initial {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) {
     return initial();
   }
@@ -146,6 +153,7 @@ class _$_Initial extends _Initial {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) {
     return initial?.call();
   }
@@ -158,6 +166,7 @@ class _$_Initial extends _Initial {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -174,6 +183,7 @@ class _$_Initial extends _Initial {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) {
     return initial(this);
   }
@@ -186,6 +196,7 @@ class _$_Initial extends _Initial {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) {
     return initial?.call(this);
   }
@@ -198,6 +209,7 @@ class _$_Initial extends _Initial {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -255,6 +267,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) {
     return loading();
   }
@@ -267,6 +280,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) {
     return loading?.call();
   }
@@ -279,6 +293,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -295,6 +310,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) {
     return loading(this);
   }
@@ -307,6 +323,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) {
     return loading?.call(this);
   }
@@ -319,6 +336,7 @@ class _$LoadingRegisterState extends LoadingRegisterState {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -413,6 +431,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) {
     return loaded(formValidation);
   }
@@ -425,6 +444,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) {
     return loaded?.call(formValidation);
   }
@@ -437,6 +457,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -453,6 +474,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) {
     return loaded(this);
   }
@@ -465,6 +487,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) {
     return loaded?.call(this);
   }
@@ -477,6 +500,7 @@ class _$LoadedRegisterState extends LoadedRegisterState {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -540,6 +564,7 @@ class _$_Success extends _Success {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) {
     return success();
   }
@@ -552,6 +577,7 @@ class _$_Success extends _Success {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) {
     return success?.call();
   }
@@ -564,6 +590,7 @@ class _$_Success extends _Success {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -580,6 +607,7 @@ class _$_Success extends _Success {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) {
     return success(this);
   }
@@ -592,6 +620,7 @@ class _$_Success extends _Success {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) {
     return success?.call(this);
   }
@@ -604,6 +633,7 @@ class _$_Success extends _Success {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -686,6 +716,7 @@ class _$_Error extends _Error {
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
     required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
   }) {
     return error(errorMessage);
   }
@@ -698,6 +729,7 @@ class _$_Error extends _Error {
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
     TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
   }) {
     return error?.call(errorMessage);
   }
@@ -710,6 +742,7 @@ class _$_Error extends _Error {
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
     TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -726,6 +759,7 @@ class _$_Error extends _Error {
     required TResult Function(LoadedRegisterState value) loaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
   }) {
     return error(this);
   }
@@ -738,6 +772,7 @@ class _$_Error extends _Error {
     TResult? Function(LoadedRegisterState value)? loaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
   }) {
     return error?.call(this);
   }
@@ -750,6 +785,7 @@ class _$_Error extends _Error {
     TResult Function(LoadedRegisterState value)? loaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -770,28 +806,207 @@ abstract class _Error extends RegisterState {
 }
 
 /// @nodoc
+abstract class _$$_ConfirmReferralCopyWith<$Res> {
+  factory _$$_ConfirmReferralCopyWith(
+          _$_ConfirmReferral value, $Res Function(_$_ConfirmReferral) then) =
+      __$$_ConfirmReferralCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ResellerModel? referral});
+
+  $ResellerModelCopyWith<$Res>? get referral;
+}
+
+/// @nodoc
+class __$$_ConfirmReferralCopyWithImpl<$Res>
+    extends _$RegisterStateCopyWithImpl<$Res, _$_ConfirmReferral>
+    implements _$$_ConfirmReferralCopyWith<$Res> {
+  __$$_ConfirmReferralCopyWithImpl(
+      _$_ConfirmReferral _value, $Res Function(_$_ConfirmReferral) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? referral = freezed,
+  }) {
+    return _then(_$_ConfirmReferral(
+      referral: freezed == referral
+          ? _value.referral
+          : referral // ignore: cast_nullable_to_non_nullable
+              as ResellerModel?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ResellerModelCopyWith<$Res>? get referral {
+    if (_value.referral == null) {
+      return null;
+    }
+
+    return $ResellerModelCopyWith<$Res>(_value.referral!, (value) {
+      return _then(_value.copyWith(referral: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_ConfirmReferral extends _ConfirmReferral {
+  const _$_ConfirmReferral({required this.referral}) : super._();
+
+  @override
+  final ResellerModel? referral;
+
+  @override
+  String toString() {
+    return 'RegisterState.confirmReferral(referral: $referral)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConfirmReferral &&
+            (identical(other.referral, referral) ||
+                other.referral == referral));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, referral);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConfirmReferralCopyWith<_$_ConfirmReferral> get copyWith =>
+      __$$_ConfirmReferralCopyWithImpl<_$_ConfirmReferral>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(Map<String, String> formValidation) loaded,
+    required TResult Function() success,
+    required TResult Function(String? errorMessage) error,
+    required TResult Function(ResellerModel? referral) confirmReferral,
+  }) {
+    return confirmReferral(referral);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(Map<String, String> formValidation)? loaded,
+    TResult? Function()? success,
+    TResult? Function(String? errorMessage)? error,
+    TResult? Function(ResellerModel? referral)? confirmReferral,
+  }) {
+    return confirmReferral?.call(referral);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Map<String, String> formValidation)? loaded,
+    TResult Function()? success,
+    TResult Function(String? errorMessage)? error,
+    TResult Function(ResellerModel? referral)? confirmReferral,
+    required TResult orElse(),
+  }) {
+    if (confirmReferral != null) {
+      return confirmReferral(referral);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingRegisterState value) loading,
+    required TResult Function(LoadedRegisterState value) loaded,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_ConfirmReferral value) confirmReferral,
+  }) {
+    return confirmReferral(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingRegisterState value)? loading,
+    TResult? Function(LoadedRegisterState value)? loaded,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_ConfirmReferral value)? confirmReferral,
+  }) {
+    return confirmReferral?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingRegisterState value)? loading,
+    TResult Function(LoadedRegisterState value)? loaded,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_ConfirmReferral value)? confirmReferral,
+    required TResult orElse(),
+  }) {
+    if (confirmReferral != null) {
+      return confirmReferral(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConfirmReferral extends RegisterState {
+  const factory _ConfirmReferral({required final ResellerModel? referral}) =
+      _$_ConfirmReferral;
+  const _ConfirmReferral._() : super._();
+
+  ResellerModel? get referral;
+  @JsonKey(ignore: true)
+  _$$_ConfirmReferralCopyWith<_$_ConfirmReferral> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$RegisterEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)
+    required TResult Function(
+            bool confirmedReferral,
+            String fullName,
+            String email,
+            String password,
+            String confirmPassword,
+            String referral)
         registerButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult? Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) =>
@@ -874,8 +1089,13 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)
+    required TResult Function(
+            bool confirmedReferral,
+            String fullName,
+            String email,
+            String password,
+            String confirmPassword,
+            String referral)
         registerButtonPressed,
   }) {
     return started();
@@ -885,8 +1105,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult? Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
   }) {
     return started?.call();
@@ -896,8 +1116,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) {
@@ -951,7 +1171,8 @@ abstract class _$$_RegisterButtonPressedCopyWith<$Res> {
       __$$_RegisterButtonPressedCopyWithImpl<$Res>;
   @useResult
   $Res call(
-      {String fullName,
+      {bool confirmedReferral,
+      String fullName,
       String email,
       String password,
       String confirmPassword,
@@ -969,6 +1190,7 @@ class __$$_RegisterButtonPressedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? confirmedReferral = null,
     Object? fullName = null,
     Object? email = null,
     Object? password = null,
@@ -976,6 +1198,10 @@ class __$$_RegisterButtonPressedCopyWithImpl<$Res>
     Object? referral = null,
   }) {
     return _then(_$_RegisterButtonPressed(
+      confirmedReferral: null == confirmedReferral
+          ? _value.confirmedReferral
+          : confirmedReferral // ignore: cast_nullable_to_non_nullable
+              as bool,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -1004,12 +1230,16 @@ class __$$_RegisterButtonPressedCopyWithImpl<$Res>
 
 class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   const _$_RegisterButtonPressed(
-      {required this.fullName,
+      {this.confirmedReferral = false,
+      required this.fullName,
       required this.email,
       required this.password,
       required this.confirmPassword,
       required this.referral});
 
+  @override
+  @JsonKey()
+  final bool confirmedReferral;
   @override
   final String fullName;
   @override
@@ -1023,7 +1253,7 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
 
   @override
   String toString() {
-    return 'RegisterEvent.registerButtonPressed(fullName: $fullName, email: $email, password: $password, confirmPassword: $confirmPassword, referral: $referral)';
+    return 'RegisterEvent.registerButtonPressed(confirmedReferral: $confirmedReferral, fullName: $fullName, email: $email, password: $password, confirmPassword: $confirmPassword, referral: $referral)';
   }
 
   @override
@@ -1031,6 +1261,8 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RegisterButtonPressed &&
+            (identical(other.confirmedReferral, confirmedReferral) ||
+                other.confirmedReferral == confirmedReferral) &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
             (identical(other.email, email) || other.email == email) &&
@@ -1043,8 +1275,8 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, fullName, email, password, confirmPassword, referral);
+  int get hashCode => Object.hash(runtimeType, confirmedReferral, fullName,
+      email, password, confirmPassword, referral);
 
   @JsonKey(ignore: true)
   @override
@@ -1057,38 +1289,43 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)
+    required TResult Function(
+            bool confirmedReferral,
+            String fullName,
+            String email,
+            String password,
+            String confirmPassword,
+            String referral)
         registerButtonPressed,
   }) {
-    return registerButtonPressed(
-        fullName, email, password, confirmPassword, referral);
+    return registerButtonPressed(confirmedReferral, fullName, email, password,
+        confirmPassword, referral);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult? Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
   }) {
-    return registerButtonPressed?.call(
-        fullName, email, password, confirmPassword, referral);
+    return registerButtonPressed?.call(confirmedReferral, fullName, email,
+        password, confirmPassword, referral);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(String fullName, String email, String password,
-            String confirmPassword, String referral)?
+    TResult Function(bool confirmedReferral, String fullName, String email,
+            String password, String confirmPassword, String referral)?
         registerButtonPressed,
     required TResult orElse(),
   }) {
     if (registerButtonPressed != null) {
-      return registerButtonPressed(
-          fullName, email, password, confirmPassword, referral);
+      return registerButtonPressed(confirmedReferral, fullName, email, password,
+          confirmPassword, referral);
     }
     return orElse();
   }
@@ -1128,12 +1365,14 @@ class _$_RegisterButtonPressed implements _RegisterButtonPressed {
 
 abstract class _RegisterButtonPressed implements RegisterEvent {
   const factory _RegisterButtonPressed(
-      {required final String fullName,
+      {final bool confirmedReferral,
+      required final String fullName,
       required final String email,
       required final String password,
       required final String confirmPassword,
       required final String referral}) = _$_RegisterButtonPressed;
 
+  bool get confirmedReferral;
   String get fullName;
   String get email;
   String get password;

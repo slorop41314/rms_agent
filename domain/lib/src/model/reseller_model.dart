@@ -17,9 +17,8 @@ abstract class ResellerModel with _$ResellerModel {
     final bool? active,
     @JsonKey(name: 'referred_by') final String? referredBy,
     @JsonKey(name: 'referral_code') final String? referralCode,
-    @JsonKey(name: 'referral_link') final String? referralLink,
-    @JsonKey(name: 'referred_resellers') final List<String>? referredResellers,
     @JsonKey(name: 'default_password') required bool defaultPassword,
+    @JsonKey(name: 'is_approved') required bool isApproved,
   }) = _ResellerModel;
 
   factory ResellerModel.fromJson(Map<String, dynamic> json) =>

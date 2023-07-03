@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 42 (21 per locale)
+/// Strings: 62 (31 per locale)
 ///
-/// Built on 2023-07-02 at 15:08 UTC
+/// Built on 2023-07-03 at 06:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -152,6 +152,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get password => 'Password';
 	String get confirmPassword => 'Confirm password';
 	String get referralCode => 'Referral code';
+	String get phoneNumber => 'Phone number';
+	String get cancel => 'Cancel';
+	String get confirm => 'Confirm';
 	late final _StringsMenuEn menu = _StringsMenuEn._(_root);
 	late final _StringsSettingsEn settings = _StringsSettingsEn._(_root);
 	late final _StringsErrorEn error = _StringsErrorEn._(_root);
@@ -218,6 +221,8 @@ class _StringsRegisterEn {
 	String get messageTitle => 'Create an account';
 	String get messageDescription => 'Let\'s get started by filling out the form. You can ask referral from your referree.';
 	String get button => 'Register';
+	String get referralNotFound => 'User with this referral code not found. Re-input or remove referral code to continue';
+	String get referralInformation => 'Referral Information';
 }
 
 // Path: formValidations
@@ -227,7 +232,12 @@ class _StringsFormValidationsEn {
 	final _StringsEn _root; // ignore: unused_field
 
 	// Translations
-	String get emailNotValid => 'Email is not valid';
+	String fieldParamNotValid({required Object label}) => '${label} is not valid';
+	String get passwordMinLength => 'Minimum password length is 8';
+	String get passwordContainSpaces => 'Password cannot contain spaces';
+	String get confirmPasswordNotEqual => 'Password and confirm password are not equal';
+	String get fieldCannotBeEmpty => 'Field cannot be empty';
+	String fieldParamCannotBeEmpty({required Object label}) => '${label} cannot be empty';
 }
 
 // Path: <root>
@@ -260,6 +270,9 @@ class _StringsId implements _StringsEn {
 	@override String get password => 'Password';
 	@override String get confirmPassword => 'Konfirmasi password';
 	@override String get referralCode => 'Kode referral';
+	@override String get phoneNumber => 'No telepon';
+	@override String get cancel => 'Batal';
+	@override String get confirm => 'Konfirmasi';
 	@override late final _StringsMenuId menu = _StringsMenuId._(_root);
 	@override late final _StringsSettingsId settings = _StringsSettingsId._(_root);
 	@override late final _StringsErrorId error = _StringsErrorId._(_root);
@@ -326,6 +339,8 @@ class _StringsRegisterId implements _StringsRegisterEn {
 	@override String get messageTitle => 'Buat akun';
 	@override String get messageDescription => 'Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.';
 	@override String get button => 'Daftar';
+	@override String get referralNotFound => 'Referral code tidak ditemukan. Input ulang atau hapus referral code untuk melanjutkan';
+	@override String get referralInformation => 'Informasi Referral';
 }
 
 // Path: formValidations
@@ -335,7 +350,12 @@ class _StringsFormValidationsId implements _StringsFormValidationsEn {
 	@override final _StringsId _root; // ignore: unused_field
 
 	// Translations
-	@override String get emailNotValid => 'Email tidak valid';
+	@override String fieldParamNotValid({required Object label}) => '${label} tidak valid';
+	@override String get passwordMinLength => 'Minimal panjang password adalah 8';
+	@override String get passwordContainSpaces => 'Password tidak boleh mengandung spasi';
+	@override String get confirmPasswordNotEqual => 'Password dan konfirmasi password tidak sama';
+	@override String get fieldCannotBeEmpty => 'Input tidak boleh kosong';
+	@override String fieldParamCannotBeEmpty({required Object label}) => '${label} tidak boleh kosong';
 }
 
 /// Flat map(s) containing all translations.
@@ -349,6 +369,9 @@ extension on _StringsEn {
 			case 'password': return 'Password';
 			case 'confirmPassword': return 'Confirm password';
 			case 'referralCode': return 'Referral code';
+			case 'phoneNumber': return 'Phone number';
+			case 'cancel': return 'Cancel';
+			case 'confirm': return 'Confirm';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Settings';
 			case 'settings.yourAccount': return 'Your account';
@@ -364,7 +387,14 @@ extension on _StringsEn {
 			case 'register.messageTitle': return 'Create an account';
 			case 'register.messageDescription': return 'Let\'s get started by filling out the form. You can ask referral from your referree.';
 			case 'register.button': return 'Register';
-			case 'formValidations.emailNotValid': return 'Email is not valid';
+			case 'register.referralNotFound': return 'User with this referral code not found. Re-input or remove referral code to continue';
+			case 'register.referralInformation': return 'Referral Information';
+			case 'formValidations.fieldParamNotValid': return ({required Object label}) => '${label} is not valid';
+			case 'formValidations.passwordMinLength': return 'Minimum password length is 8';
+			case 'formValidations.passwordContainSpaces': return 'Password cannot contain spaces';
+			case 'formValidations.confirmPasswordNotEqual': return 'Password and confirm password are not equal';
+			case 'formValidations.fieldCannotBeEmpty': return 'Field cannot be empty';
+			case 'formValidations.fieldParamCannotBeEmpty': return ({required Object label}) => '${label} cannot be empty';
 			default: return null;
 		}
 	}
@@ -378,6 +408,9 @@ extension on _StringsId {
 			case 'password': return 'Password';
 			case 'confirmPassword': return 'Konfirmasi password';
 			case 'referralCode': return 'Kode referral';
+			case 'phoneNumber': return 'No telepon';
+			case 'cancel': return 'Batal';
+			case 'confirm': return 'Konfirmasi';
 			case 'menu.home': return 'Home';
 			case 'menu.settings': return 'Pengaturan';
 			case 'settings.yourAccount': return 'Akun kamu';
@@ -393,7 +426,14 @@ extension on _StringsId {
 			case 'register.messageTitle': return 'Buat akun';
 			case 'register.messageDescription': return 'Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.';
 			case 'register.button': return 'Daftar';
-			case 'formValidations.emailNotValid': return 'Email tidak valid';
+			case 'register.referralNotFound': return 'Referral code tidak ditemukan. Input ulang atau hapus referral code untuk melanjutkan';
+			case 'register.referralInformation': return 'Informasi Referral';
+			case 'formValidations.fieldParamNotValid': return ({required Object label}) => '${label} tidak valid';
+			case 'formValidations.passwordMinLength': return 'Minimal panjang password adalah 8';
+			case 'formValidations.passwordContainSpaces': return 'Password tidak boleh mengandung spasi';
+			case 'formValidations.confirmPasswordNotEqual': return 'Password dan konfirmasi password tidak sama';
+			case 'formValidations.fieldCannotBeEmpty': return 'Input tidak boleh kosong';
+			case 'formValidations.fieldParamCannotBeEmpty': return ({required Object label}) => '${label} tidak boleh kosong';
 			default: return null;
 		}
 	}

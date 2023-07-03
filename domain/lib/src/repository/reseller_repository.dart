@@ -13,4 +13,8 @@ abstract class ResellerRepository {
   Future<void> updateProfile(
     ResellerModel profileModel,
   );
+
+  Future<ResellerModel?> getProfileByReferralCode(
+    String referralCode,
+  );
 }

@@ -23,11 +23,8 @@ _$_ResellerModel _$$_ResellerModelFromJson(Map<String, dynamic> json) =>
       active: json['active'] as bool?,
       referredBy: json['referred_by'] as String?,
       referralCode: json['referral_code'] as String?,
-      referralLink: json['referral_link'] as String?,
-      referredResellers: (json['referred_resellers'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
       defaultPassword: json['default_password'] as bool,
+      isApproved: json['is_approved'] as bool,
     );
 
 Map<String, dynamic> _$$_ResellerModelToJson(_$_ResellerModel instance) =>
@@ -43,7 +40,6 @@ Map<String, dynamic> _$$_ResellerModelToJson(_$_ResellerModel instance) =>
       'active': instance.active,
       'referred_by': instance.referredBy,
       'referral_code': instance.referralCode,
-      'referral_link': instance.referralLink,
-      'referred_resellers': instance.referredResellers,
       'default_password': instance.defaultPassword,
+      'is_approved': instance.isApproved,
     };

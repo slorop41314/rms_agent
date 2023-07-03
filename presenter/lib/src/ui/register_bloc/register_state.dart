@@ -12,5 +12,10 @@ class RegisterState with _$RegisterState {
     required Map<String, String> formValidation,
   }) = LoadedRegisterState;
   const factory RegisterState.success() = _Success;
-  const factory RegisterState.error({String? errorMessage}) = _Error;
+  const factory RegisterState.error({
+    String? errorMessage,
+  }) = _Error;
+  const factory RegisterState.confirmReferral({
+    required ResellerModel? referral,
+  }) = _ConfirmReferral;
 }

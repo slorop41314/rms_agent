@@ -30,4 +30,9 @@ class ResellerRepositoryImpl implements ResellerRepository {
   Future<void> updateProfile(ResellerModel profileModel) {
     return _resellerRemote.updateResellerData(profileModel);
   }
+
+  @override
+  Future<ResellerModel?> getProfileByReferralCode(String referralCode) {
+    return _resellerRemote.getProfileByReferralCode(referralCode);
+  }
 }

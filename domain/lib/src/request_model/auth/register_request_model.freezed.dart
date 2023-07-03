@@ -25,6 +25,7 @@ mixin _$RegisterRequestModel {
   String get password => throw _privateConstructorUsedError;
   String? get referralCode => throw _privateConstructorUsedError;
   String? get phoneNumber => throw _privateConstructorUsedError;
+  ResellerModel? get referredByUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +44,10 @@ abstract class $RegisterRequestModelCopyWith<$Res> {
       String email,
       String password,
       String? referralCode,
-      String? phoneNumber});
+      String? phoneNumber,
+      ResellerModel? referredByUser});
+
+  $ResellerModelCopyWith<$Res>? get referredByUser;
 }
 
 /// @nodoc
@@ -65,6 +69,7 @@ class _$RegisterRequestModelCopyWithImpl<$Res,
     Object? password = null,
     Object? referralCode = freezed,
     Object? phoneNumber = freezed,
+    Object? referredByUser = freezed,
   }) {
     return _then(_value.copyWith(
       fullName: null == fullName
@@ -87,7 +92,23 @@ class _$RegisterRequestModelCopyWithImpl<$Res,
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
+      referredByUser: freezed == referredByUser
+          ? _value.referredByUser
+          : referredByUser // ignore: cast_nullable_to_non_nullable
+              as ResellerModel?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ResellerModelCopyWith<$Res>? get referredByUser {
+    if (_value.referredByUser == null) {
+      return null;
+    }
+
+    return $ResellerModelCopyWith<$Res>(_value.referredByUser!, (value) {
+      return _then(_value.copyWith(referredByUser: value) as $Val);
+    });
   }
 }
 
@@ -104,7 +125,11 @@ abstract class _$$_RegisterRequestModelCopyWith<$Res>
       String email,
       String password,
       String? referralCode,
-      String? phoneNumber});
+      String? phoneNumber,
+      ResellerModel? referredByUser});
+
+  @override
+  $ResellerModelCopyWith<$Res>? get referredByUser;
 }
 
 /// @nodoc
@@ -123,6 +148,7 @@ class __$$_RegisterRequestModelCopyWithImpl<$Res>
     Object? password = null,
     Object? referralCode = freezed,
     Object? phoneNumber = freezed,
+    Object? referredByUser = freezed,
   }) {
     return _then(_$_RegisterRequestModel(
       fullName: null == fullName
@@ -145,6 +171,10 @@ class __$$_RegisterRequestModelCopyWithImpl<$Res>
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
+      referredByUser: freezed == referredByUser
+          ? _value.referredByUser
+          : referredByUser // ignore: cast_nullable_to_non_nullable
+              as ResellerModel?,
     ));
   }
 }
@@ -157,7 +187,8 @@ class _$_RegisterRequestModel implements _RegisterRequestModel {
       required this.email,
       required this.password,
       this.referralCode,
-      this.phoneNumber});
+      this.phoneNumber,
+      this.referredByUser});
 
   factory _$_RegisterRequestModel.fromJson(Map<String, dynamic> json) =>
       _$$_RegisterRequestModelFromJson(json);
@@ -172,10 +203,12 @@ class _$_RegisterRequestModel implements _RegisterRequestModel {
   final String? referralCode;
   @override
   final String? phoneNumber;
+  @override
+  final ResellerModel? referredByUser;
 
   @override
   String toString() {
-    return 'RegisterRequestModel(fullName: $fullName, email: $email, password: $password, referralCode: $referralCode, phoneNumber: $phoneNumber)';
+    return 'RegisterRequestModel(fullName: $fullName, email: $email, password: $password, referralCode: $referralCode, phoneNumber: $phoneNumber, referredByUser: $referredByUser)';
   }
 
   @override
@@ -191,13 +224,15 @@ class _$_RegisterRequestModel implements _RegisterRequestModel {
             (identical(other.referralCode, referralCode) ||
                 other.referralCode == referralCode) &&
             (identical(other.phoneNumber, phoneNumber) ||
-                other.phoneNumber == phoneNumber));
+                other.phoneNumber == phoneNumber) &&
+            (identical(other.referredByUser, referredByUser) ||
+                other.referredByUser == referredByUser));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, fullName, email, password, referralCode, phoneNumber);
+  int get hashCode => Object.hash(runtimeType, fullName, email, password,
+      referralCode, phoneNumber, referredByUser);
 
   @JsonKey(ignore: true)
   @override
@@ -220,7 +255,8 @@ abstract class _RegisterRequestModel implements RegisterRequestModel {
       required final String email,
       required final String password,
       final String? referralCode,
-      final String? phoneNumber}) = _$_RegisterRequestModel;
+      final String? phoneNumber,
+      final ResellerModel? referredByUser}) = _$_RegisterRequestModel;
 
   factory _RegisterRequestModel.fromJson(Map<String, dynamic> json) =
       _$_RegisterRequestModel.fromJson;
@@ -235,6 +271,8 @@ abstract class _RegisterRequestModel implements RegisterRequestModel {
   String? get referralCode;
   @override
   String? get phoneNumber;
+  @override
+  ResellerModel? get referredByUser;
   @override
   @JsonKey(ignore: true)
   _$$_RegisterRequestModelCopyWith<_$_RegisterRequestModel> get copyWith =>
