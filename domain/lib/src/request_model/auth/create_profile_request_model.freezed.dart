@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'register_request_model.dart';
+part of 'create_profile_request_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,35 +14,32 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-RegisterRequestModel _$RegisterRequestModelFromJson(Map<String, dynamic> json) {
-  return _RegisterRequestModel.fromJson(json);
+CreateProfileRequestModel _$CreateProfileRequestModelFromJson(
+    Map<String, dynamic> json) {
+  return _CreateProfileRequestModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$RegisterRequestModel {
+mixin _$CreateProfileRequestModel {
   String get fullName => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
   String? get referralCode => throw _privateConstructorUsedError;
   String? get phoneNumber => throw _privateConstructorUsedError;
   ResellerModel? get referredByUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RegisterRequestModelCopyWith<RegisterRequestModel> get copyWith =>
+  $CreateProfileRequestModelCopyWith<CreateProfileRequestModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RegisterRequestModelCopyWith<$Res> {
-  factory $RegisterRequestModelCopyWith(RegisterRequestModel value,
-          $Res Function(RegisterRequestModel) then) =
-      _$RegisterRequestModelCopyWithImpl<$Res, RegisterRequestModel>;
+abstract class $CreateProfileRequestModelCopyWith<$Res> {
+  factory $CreateProfileRequestModelCopyWith(CreateProfileRequestModel value,
+          $Res Function(CreateProfileRequestModel) then) =
+      _$CreateProfileRequestModelCopyWithImpl<$Res, CreateProfileRequestModel>;
   @useResult
   $Res call(
       {String fullName,
-      String email,
-      String password,
       String? referralCode,
       String? phoneNumber,
       ResellerModel? referredByUser});
@@ -51,10 +48,10 @@ abstract class $RegisterRequestModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegisterRequestModelCopyWithImpl<$Res,
-        $Val extends RegisterRequestModel>
-    implements $RegisterRequestModelCopyWith<$Res> {
-  _$RegisterRequestModelCopyWithImpl(this._value, this._then);
+class _$CreateProfileRequestModelCopyWithImpl<$Res,
+        $Val extends CreateProfileRequestModel>
+    implements $CreateProfileRequestModelCopyWith<$Res> {
+  _$CreateProfileRequestModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -65,8 +62,6 @@ class _$RegisterRequestModelCopyWithImpl<$Res,
   @override
   $Res call({
     Object? fullName = null,
-    Object? email = null,
-    Object? password = null,
     Object? referralCode = freezed,
     Object? phoneNumber = freezed,
     Object? referredByUser = freezed,
@@ -75,14 +70,6 @@ class _$RegisterRequestModelCopyWithImpl<$Res,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
               as String,
       referralCode: freezed == referralCode
           ? _value.referralCode
@@ -113,17 +100,16 @@ class _$RegisterRequestModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RegisterRequestModelCopyWith<$Res>
-    implements $RegisterRequestModelCopyWith<$Res> {
-  factory _$$_RegisterRequestModelCopyWith(_$_RegisterRequestModel value,
-          $Res Function(_$_RegisterRequestModel) then) =
-      __$$_RegisterRequestModelCopyWithImpl<$Res>;
+abstract class _$$_CreateProfileRequestModelCopyWith<$Res>
+    implements $CreateProfileRequestModelCopyWith<$Res> {
+  factory _$$_CreateProfileRequestModelCopyWith(
+          _$_CreateProfileRequestModel value,
+          $Res Function(_$_CreateProfileRequestModel) then) =
+      __$$_CreateProfileRequestModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String fullName,
-      String email,
-      String password,
       String? referralCode,
       String? phoneNumber,
       ResellerModel? referredByUser});
@@ -133,35 +119,27 @@ abstract class _$$_RegisterRequestModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RegisterRequestModelCopyWithImpl<$Res>
-    extends _$RegisterRequestModelCopyWithImpl<$Res, _$_RegisterRequestModel>
-    implements _$$_RegisterRequestModelCopyWith<$Res> {
-  __$$_RegisterRequestModelCopyWithImpl(_$_RegisterRequestModel _value,
-      $Res Function(_$_RegisterRequestModel) _then)
+class __$$_CreateProfileRequestModelCopyWithImpl<$Res>
+    extends _$CreateProfileRequestModelCopyWithImpl<$Res,
+        _$_CreateProfileRequestModel>
+    implements _$$_CreateProfileRequestModelCopyWith<$Res> {
+  __$$_CreateProfileRequestModelCopyWithImpl(
+      _$_CreateProfileRequestModel _value,
+      $Res Function(_$_CreateProfileRequestModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? fullName = null,
-    Object? email = null,
-    Object? password = null,
     Object? referralCode = freezed,
     Object? phoneNumber = freezed,
     Object? referredByUser = freezed,
   }) {
-    return _then(_$_RegisterRequestModel(
+    return _then(_$_CreateProfileRequestModel(
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
               as String,
       referralCode: freezed == referralCode
           ? _value.referralCode
@@ -181,24 +159,18 @@ class __$$_RegisterRequestModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RegisterRequestModel implements _RegisterRequestModel {
-  const _$_RegisterRequestModel(
+class _$_CreateProfileRequestModel implements _CreateProfileRequestModel {
+  const _$_CreateProfileRequestModel(
       {required this.fullName,
-      required this.email,
-      required this.password,
       this.referralCode,
       this.phoneNumber,
       this.referredByUser});
 
-  factory _$_RegisterRequestModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RegisterRequestModelFromJson(json);
+  factory _$_CreateProfileRequestModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CreateProfileRequestModelFromJson(json);
 
   @override
   final String fullName;
-  @override
-  final String email;
-  @override
-  final String password;
   @override
   final String? referralCode;
   @override
@@ -208,19 +180,16 @@ class _$_RegisterRequestModel implements _RegisterRequestModel {
 
   @override
   String toString() {
-    return 'RegisterRequestModel(fullName: $fullName, email: $email, password: $password, referralCode: $referralCode, phoneNumber: $phoneNumber, referredByUser: $referredByUser)';
+    return 'CreateProfileRequestModel(fullName: $fullName, referralCode: $referralCode, phoneNumber: $phoneNumber, referredByUser: $referredByUser)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegisterRequestModel &&
+            other is _$_CreateProfileRequestModel &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
             (identical(other.referralCode, referralCode) ||
                 other.referralCode == referralCode) &&
             (identical(other.phoneNumber, phoneNumber) ||
@@ -231,42 +200,36 @@ class _$_RegisterRequestModel implements _RegisterRequestModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, fullName, email, password,
-      referralCode, phoneNumber, referredByUser);
+  int get hashCode => Object.hash(
+      runtimeType, fullName, referralCode, phoneNumber, referredByUser);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegisterRequestModelCopyWith<_$_RegisterRequestModel> get copyWith =>
-      __$$_RegisterRequestModelCopyWithImpl<_$_RegisterRequestModel>(
-          this, _$identity);
+  _$$_CreateProfileRequestModelCopyWith<_$_CreateProfileRequestModel>
+      get copyWith => __$$_CreateProfileRequestModelCopyWithImpl<
+          _$_CreateProfileRequestModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegisterRequestModelToJson(
+    return _$$_CreateProfileRequestModelToJson(
       this,
     );
   }
 }
 
-abstract class _RegisterRequestModel implements RegisterRequestModel {
-  const factory _RegisterRequestModel(
+abstract class _CreateProfileRequestModel implements CreateProfileRequestModel {
+  const factory _CreateProfileRequestModel(
       {required final String fullName,
-      required final String email,
-      required final String password,
       final String? referralCode,
       final String? phoneNumber,
-      final ResellerModel? referredByUser}) = _$_RegisterRequestModel;
+      final ResellerModel? referredByUser}) = _$_CreateProfileRequestModel;
 
-  factory _RegisterRequestModel.fromJson(Map<String, dynamic> json) =
-      _$_RegisterRequestModel.fromJson;
+  factory _CreateProfileRequestModel.fromJson(Map<String, dynamic> json) =
+      _$_CreateProfileRequestModel.fromJson;
 
   @override
   String get fullName;
-  @override
-  String get email;
-  @override
-  String get password;
   @override
   String? get referralCode;
   @override
@@ -275,6 +238,6 @@ abstract class _RegisterRequestModel implements RegisterRequestModel {
   ResellerModel? get referredByUser;
   @override
   @JsonKey(ignore: true)
-  _$$_RegisterRequestModelCopyWith<_$_RegisterRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CreateProfileRequestModelCopyWith<_$_CreateProfileRequestModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

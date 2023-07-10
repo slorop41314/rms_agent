@@ -12,5 +12,6 @@ class LoginState with _$LoginState {
     required Map<String, String> formValidation,
   }) = LoadedLoginState;
   const factory LoginState.success() = _Success;
+  const factory LoginState.verifyEmail() = _VerifyEmail;
   const factory LoginState.error({String? errorMessage}) = _Error;
 }

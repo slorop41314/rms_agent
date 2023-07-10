@@ -146,6 +146,11 @@ class _LoginScreenState extends State<LoginScreen> {
       error: (msg) {
         context.showErrorSnackbar(msg);
       },
+      verifyEmail: () {
+        context.router.push(
+          const VerifyEmailRoute(),
+        );
+      },
       orElse: () {},
     );
     //

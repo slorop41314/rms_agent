@@ -1,1 +1,1 @@
-export 'auth/register_request_model.dart';
+export 'auth/create_profile_request_model.dart';

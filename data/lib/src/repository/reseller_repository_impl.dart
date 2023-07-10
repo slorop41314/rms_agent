@@ -17,11 +17,11 @@ class ResellerRepositoryImpl implements ResellerRepository {
 
   @override
   Future<void> addProfile(
-    String userId,
-    RegisterRequestModel registerModel,
+    User user,
+    CreateProfileRequestModel registerModel,
   ) {
     return _resellerRemote.addProfile(
-      userId,
+      user,
       registerModel,
     );
   }

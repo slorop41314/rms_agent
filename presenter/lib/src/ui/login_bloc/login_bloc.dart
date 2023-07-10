@@ -58,6 +58,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         const LoginState.success(),
       );
     } on AuthException catch (exc) {
+      if (exc.message.toLowerCase() == 'email not confirmed') {
+        emit(const LoginState.verifyEmail());
+        return;
+      }
       emit(LoginState.error(errorMessage: exc.message));
     } catch (err) {
       emit(const LoginState.error());

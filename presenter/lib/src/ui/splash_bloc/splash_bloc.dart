@@ -24,11 +24,12 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     _Started event,
     Emitter<SplashState> emit,
   ) async {
-    if (await _getCurrentAuthUserUseCase.execute() != null) {
-      emit(const SplashState.authenticated());
+    final user = await _getCurrentAuthUserUseCase.execute();
+    if (user == null) {
+      emit(const SplashState.unauthenticated());
       return;
     }
-
-    emit(const SplashState.unauthenticated());
+    emit(const SplashState.authenticated());
+    return;
   }
 }

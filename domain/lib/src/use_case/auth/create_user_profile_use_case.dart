@@ -4,17 +4,18 @@ import 'package:injectable/injectable.dart';
 @injectable
 class CreateUserProfileUseCase {
   final AuthRepository _authRepository;
+  final ResellerRepository _resellerRepository;
 
   CreateUserProfileUseCase(
     this._authRepository,
+    this._resellerRepository,
   );
 
-  Future<AuthResponse> execute(RegisterRequestModel model) async {
-    final res = await _authRepository.loginWithEmail(
-      model.email,
-      model.password,
-    );
-
-    return res;
+  Future<void> execute(CreateProfileRequestModel model) async {
+    final res = await _authRepository.getUserAuth();
+    if (res == null) {
+      return;
+    }
+    await _resellerRepository.addProfile(res, model);
   }
 }

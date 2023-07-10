@@ -15,7 +15,7 @@ class RegisterState with _$RegisterState {
   const factory RegisterState.error({
     String? errorMessage,
   }) = _Error;
-  const factory RegisterState.confirmReferral({
-    required ResellerModel? referral,
-  }) = _ConfirmReferral;
+  // const factory RegisterState.confirmReferral({
+  //   required ResellerModel? referral,
+  // }) = _ConfirmReferral;
 }

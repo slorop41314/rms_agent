@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -34,8 +33,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
-  final TextEditingController _referralController = TextEditingController();
-  final TextEditingController _nameController = TextEditingController();
 
   @override
   void initState() {
@@ -72,14 +69,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 16,
               ),
               CustomInput(
-                label: t.fullName,
-                controller: _nameController,
-                errorMessage: formValidation['fullName'],
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomInput(
                 label: t.email,
                 controller: _emailController,
                 errorMessage: formValidation['email'],
@@ -102,23 +91,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 keyboardType: TextInputType.visiblePassword,
               ),
               CustomGap.vLarge(),
-              CustomInput(
-                label: t.referralCode,
-                controller: _referralController,
-                errorMessage: formValidation['referral'],
-              ),
-              CustomGap.vLarge(),
               CustomButton(
                 isLoading: _isLoading,
                 label: t.register.button,
                 onPressed: () {
                   _bloc.add(
                     RegisterEvent.registerButtonPressed(
-                      fullName: _nameController.text,
                       email: _emailController.text,
                       password: _passwordController.text,
                       confirmPassword: _confirmPasswordController.text,
-                      referral: _referralController.text,
                     ),
                   );
                 },
@@ -144,13 +125,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
 
     state.maybeWhen(
-      confirmReferral: (model) {
-        _showReferralBottomSheet(model);
-      },
       success: () {
         context.router.pushAndPopUntil(
-          const MainDashboardRoute(),
-          predicate: (_) => false,
+          const VerifyEmailRoute(),
+          predicate: ModalRoute.withName(LoginRoute.name),
         );
       },
       error: (msg) {
@@ -159,79 +137,5 @@ class _RegisterScreenState extends State<RegisterScreen> {
       orElse: () {},
     );
     //
-  }
-
-  void _showReferralBottomSheet(ResellerModel? refferal) async {
-    CustomBottomSheet.show(
-      context,
-      title: t.register.referralInformation,
-      content: _ReferralInformationWidget(
-        referral: refferal,
-      ),
-      bottomAction: Row(
-        children: [
-          Expanded(
-            child: CustomButton(
-              label: t.cancel,
-              onPressed: context.router.pop,
-              buttonType: CustomButtonType.secondary,
-            ),
-          ),
-          if (refferal != null) ...[
-            CustomGap.hSmall(),
-            Expanded(
-              child: CustomButton(
-                label: t.confirm,
-                onPressed: () {
-                  context.router.pop();
-                  _bloc.add(
-                    RegisterEvent.registerButtonPressed(
-                      fullName: _nameController.text,
-                      email: _emailController.text,
-                      password: _passwordController.text,
-                      confirmPassword: _confirmPasswordController.text,
-                      referral: _referralController.text,
-                      confirmedReferral: true,
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
-        ],
-      ),
-    );
-  }
-}
-
-class _ReferralInformationWidget extends StatelessWidget {
-  final ResellerModel? referral;
-  const _ReferralInformationWidget({
-    required this.referral,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final _referral = referral;
-    if (_referral == null) {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            t.register.referralNotFound,
-            style: CustomTextStyles.semibold16,
-          ),
-        ],
-      );
-    }
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Text(
-          "${t.fullName}: ${_referral.name}",
-          style: CustomTextStyles.semibold16,
-        ),
-      ],
-    );
   }
 }

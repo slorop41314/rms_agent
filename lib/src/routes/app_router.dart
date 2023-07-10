@@ -20,11 +20,25 @@ class AppRouter extends _$AppRouter {
           path: RegisterScreen.route,
         ),
         AutoRoute(
+          page: VerifyEmailRoute.page,
+          path: VerifyEmailScreen.route,
+        ),
+        AutoRoute(
+          page: SetupProfileRoute.page,
+          path: SetupProfileScreen.route,
+        ),
+        AutoRoute(
           page: MainDashboardRoute.page,
           path: MainDashboardScreen.route,
           children: [
-            AutoRoute(path: HomeScreen.route, page: HomeRoute.page),
-            AutoRoute(path: SettingsScreen.route, page: SettingsRoute.page),
+            AutoRoute(
+              path: HomeScreen.route,
+              page: HomeRoute.page,
+            ),
+            AutoRoute(
+              path: SettingsScreen.route,
+              page: SettingsRoute.page,
+            ),
           ],
         ),
       ];

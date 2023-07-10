@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: WrappedRoute(child: const RegisterScreen()),
       );
     },
+    VerifyEmailRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: VerifyEmailScreen(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -37,6 +43,12 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    SetupProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: WrappedRoute(child: const SetupProfileScreen()),
       );
     },
     MainDashboardRoute.name: (routeData) {
@@ -64,6 +76,20 @@ class RegisterRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RegisterRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [VerifyEmailScreen]
+class VerifyEmailRoute extends PageRouteInfo<void> {
+  const VerifyEmailRoute({List<PageRouteInfo>? children})
+      : super(
+          VerifyEmailRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'VerifyEmailRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -106,6 +132,20 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SetupProfileScreen]
+class SetupProfileRoute extends PageRouteInfo<void> {
+  const SetupProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          SetupProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SetupProfileRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

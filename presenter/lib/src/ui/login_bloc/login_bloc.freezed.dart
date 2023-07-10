@@ -22,6 +22,7 @@ mixin _$LoginState {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -31,6 +32,7 @@ mixin _$LoginState {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -40,6 +42,7 @@ mixin _$LoginState {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) =>
@@ -50,6 +53,7 @@ mixin _$LoginState {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +63,7 @@ mixin _$LoginState {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -68,6 +73,7 @@ mixin _$LoginState {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -133,6 +139,7 @@ class _$_Initial extends _Initial {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) {
     return initial();
@@ -145,6 +152,7 @@ class _$_Initial extends _Initial {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) {
     return initial?.call();
@@ -157,6 +165,7 @@ class _$_Initial extends _Initial {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -173,6 +182,7 @@ class _$_Initial extends _Initial {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -185,6 +195,7 @@ class _$_Initial extends _Initial {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -197,6 +208,7 @@ class _$_Initial extends _Initial {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -254,6 +266,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) {
     return loading();
@@ -266,6 +279,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) {
     return loading?.call();
@@ -278,6 +292,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -294,6 +309,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -306,6 +322,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -318,6 +335,7 @@ class _$LoadingLoginState extends LoadingLoginState {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -410,6 +428,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) {
     return loaded(formValidation);
@@ -422,6 +441,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) {
     return loaded?.call(formValidation);
@@ -434,6 +454,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -450,6 +471,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -462,6 +484,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -474,6 +497,7 @@ class _$LoadedLoginState extends LoadedLoginState {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -536,6 +560,7 @@ class _$_Success extends _Success {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) {
     return success();
@@ -548,6 +573,7 @@ class _$_Success extends _Success {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) {
     return success?.call();
@@ -560,6 +586,7 @@ class _$_Success extends _Success {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -576,6 +603,7 @@ class _$_Success extends _Success {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) {
     return success(this);
@@ -588,6 +616,7 @@ class _$_Success extends _Success {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) {
     return success?.call(this);
@@ -600,6 +629,7 @@ class _$_Success extends _Success {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -613,6 +643,133 @@ class _$_Success extends _Success {
 abstract class _Success extends LoginState {
   const factory _Success() = _$_Success;
   const _Success._() : super._();
+}
+
+/// @nodoc
+abstract class _$$_VerifyEmailCopyWith<$Res> {
+  factory _$$_VerifyEmailCopyWith(
+          _$_VerifyEmail value, $Res Function(_$_VerifyEmail) then) =
+      __$$_VerifyEmailCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_VerifyEmailCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$_VerifyEmail>
+    implements _$$_VerifyEmailCopyWith<$Res> {
+  __$$_VerifyEmailCopyWithImpl(
+      _$_VerifyEmail _value, $Res Function(_$_VerifyEmail) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_VerifyEmail extends _VerifyEmail {
+  const _$_VerifyEmail() : super._();
+
+  @override
+  String toString() {
+    return 'LoginState.verifyEmail()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_VerifyEmail);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(Map<String, String> formValidation) loaded,
+    required TResult Function() success,
+    required TResult Function() verifyEmail,
+    required TResult Function(String? errorMessage) error,
+  }) {
+    return verifyEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(Map<String, String> formValidation)? loaded,
+    TResult? Function()? success,
+    TResult? Function()? verifyEmail,
+    TResult? Function(String? errorMessage)? error,
+  }) {
+    return verifyEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Map<String, String> formValidation)? loaded,
+    TResult Function()? success,
+    TResult Function()? verifyEmail,
+    TResult Function(String? errorMessage)? error,
+    required TResult orElse(),
+  }) {
+    if (verifyEmail != null) {
+      return verifyEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingLoginState value) loading,
+    required TResult Function(LoadedLoginState value) loaded,
+    required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
+    required TResult Function(_Error value) error,
+  }) {
+    return verifyEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingLoginState value)? loading,
+    TResult? Function(LoadedLoginState value)? loaded,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
+    TResult? Function(_Error value)? error,
+  }) {
+    return verifyEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingLoginState value)? loading,
+    TResult Function(LoadedLoginState value)? loaded,
+    TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (verifyEmail != null) {
+      return verifyEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyEmail extends LoginState {
+  const factory _VerifyEmail() = _$_VerifyEmail;
+  const _VerifyEmail._() : super._();
 }
 
 /// @nodoc
@@ -682,6 +839,7 @@ class _$_Error extends _Error {
     required TResult Function() loading,
     required TResult Function(Map<String, String> formValidation) loaded,
     required TResult Function() success,
+    required TResult Function() verifyEmail,
     required TResult Function(String? errorMessage) error,
   }) {
     return error(errorMessage);
@@ -694,6 +852,7 @@ class _$_Error extends _Error {
     TResult? Function()? loading,
     TResult? Function(Map<String, String> formValidation)? loaded,
     TResult? Function()? success,
+    TResult? Function()? verifyEmail,
     TResult? Function(String? errorMessage)? error,
   }) {
     return error?.call(errorMessage);
@@ -706,6 +865,7 @@ class _$_Error extends _Error {
     TResult Function()? loading,
     TResult Function(Map<String, String> formValidation)? loaded,
     TResult Function()? success,
+    TResult Function()? verifyEmail,
     TResult Function(String? errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -722,6 +882,7 @@ class _$_Error extends _Error {
     required TResult Function(LoadingLoginState value) loading,
     required TResult Function(LoadedLoginState value) loaded,
     required TResult Function(_Success value) success,
+    required TResult Function(_VerifyEmail value) verifyEmail,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -734,6 +895,7 @@ class _$_Error extends _Error {
     TResult? Function(LoadingLoginState value)? loading,
     TResult? Function(LoadedLoginState value)? loaded,
     TResult? Function(_Success value)? success,
+    TResult? Function(_VerifyEmail value)? verifyEmail,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -746,6 +908,7 @@ class _$_Error extends _Error {
     TResult Function(LoadingLoginState value)? loading,
     TResult Function(LoadedLoginState value)? loaded,
     TResult Function(_Success value)? success,
+    TResult Function(_VerifyEmail value)? verifyEmail,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

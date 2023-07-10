@@ -14,12 +14,9 @@ part 'register_bloc.freezed.dart';
 @injectable
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final RegisterWithEmailUseCase _registerWithEmailUseCase;
-  final GetResellerProfileByReferralCodeUseCase
-      _getResellerProfileByReferralCodeUseCase;
 
   RegisterBloc(
     this._registerWithEmailUseCase,
-    this._getResellerProfileByReferralCodeUseCase,
   ) : super(const RegisterState.initial()) {
     on<_Started>(_mapStartedEventToState);
     on<_RegisterButtonPressed>(_mapRegisterButtonPressedEventToState);
@@ -52,25 +49,9 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         );
         return;
       }
-      if (event.referral.trim().isNotEmpty && !event.confirmedReferral) {
-        final referral = await _getResellerProfileByReferralCodeUseCase.execute(
-          event.referral,
-        );
-        emit(
-          RegisterState.confirmReferral(
-            referral: referral,
-          ),
-        );
-        return;
-      }
-      final registerModel = RegisterRequestModel(
-        referralCode: event.referral,
-        fullName: event.fullName,
-        email: event.email,
-        password: event.password,
-      );
       await _registerWithEmailUseCase.execute(
-        registerModel,
+        event.email,
+        event.password,
       );
 
       emit(
@@ -79,7 +60,6 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     } on AuthException catch (exc) {
       emit(RegisterState.error(errorMessage: exc.message));
     } catch (err) {
-      print(err);
       emit(const RegisterState.error());
     }
     //
@@ -101,10 +81,6 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     );
     if (isConfirmPasswordValid != null) {
       _formValidations['confirmPassword'] = isConfirmPasswordValid;
-    }
-    final isNameValid = FormValidationUtils.isNotEmpty(event.fullName);
-    if (isNameValid != null) {
-      _formValidations['fullName'] = isNameValid;
     }
     return _formValidations.isEmpty;
   }

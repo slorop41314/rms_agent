@@ -28,14 +28,14 @@ class ResellerRemote {
   }
 
   Future<void> addProfile(
-    String userId,
-    RegisterRequestModel registerModel,
+    User user,
+    CreateProfileRequestModel registerModel,
   ) async {
     final resellerModel = ResellerModel(
       id: const Uuid().v4(),
       name: registerModel.fullName,
-      email: registerModel.email,
-      userId: userId,
+      email: user.email!,
+      userId: user.id,
       defaultPassword: false,
       referralCode: StringUtils.generateUniqueCode(8),
       isApproved: registerModel.referredByUser != null ? true : false,

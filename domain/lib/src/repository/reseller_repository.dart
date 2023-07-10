@@ -6,8 +6,8 @@ abstract class ResellerRepository {
   );
 
   Future<void> addProfile(
-    String userId,
-    RegisterRequestModel registerModel,
+    User userId,
+    CreateProfileRequestModel registerModel,
   );
 
   Future<void> updateProfile(
