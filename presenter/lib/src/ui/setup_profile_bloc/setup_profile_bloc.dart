@@ -64,9 +64,12 @@ class SetupProfileBloc extends Bloc<SetupProfileEvent, SetupProfileState> {
         return;
       }
 
-      final referral = await _getResellerProfileByReferralCodeUseCase.execute(
-        event.referralCode,
-      );
+      ResellerModel? referral;
+      if (event.confirmedReferral) {
+        referral = await _getResellerProfileByReferralCodeUseCase.execute(
+          event.referralCode,
+        );
+      }
       final reqModel = CreateProfileRequestModel(
         fullName: event.fullName,
         referralCode: referral != null ? event.referralCode : null,
