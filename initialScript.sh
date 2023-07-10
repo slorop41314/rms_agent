@@ -174,6 +174,7 @@ fi
 
 
 if $translate; then
+  cd utilities/
   echo 'Translate'
   dart run slang
 fi

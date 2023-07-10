@@ -46,16 +46,16 @@ dependencies:
   freezed_annotation: ^2.2.0
   injectable: ^2.1.2
   jiffy: ^6.2.1
+  lottie: ^2.4.0
   get_it: ^7.6.0
   google_fonts: ^5.1.0
   data:
     path: ./data
   presenter:
     path: ./presenter
-  slang: ^3.19.0
-  slang_flutter: ^3.19.0
   utilities:
     path: ./utilities
+  shimmer: ^3.0.0
 
 dev_dependencies:
   auto_route_generator: ^7.1.1
@@ -84,8 +84,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/fluttie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -113,3 +113,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_gen:
+  output: lib/src/assets/
+  line_length: 80
+  assets:
+    outputs:
+      package_parameter_enabled: true
+      class_name: AppAssets
+  integrations:
+    flutter_svg: true
+    lottie: true

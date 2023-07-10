@@ -1,11 +1,16 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:presenter/presenter.dart';
+import 'package:rms_agent/src/components/shared/app_theme.dart';
 import 'package:rms_agent/src/routes/app_router.dart';
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   final _appRouter = AppRouter();
 
   @override
@@ -13,12 +18,18 @@ class MainApp extends StatelessWidget {
     return BlocProvider<MainAppBloc>(
       create: (_) => GetIt.I.get()
         ..add(
-          MainAppEvent.started(),
+          const MainAppEvent.started(),
         ),
       child: BlocListener<MainAppBloc, MainAppState>(
         listener: _listener,
-        child: MaterialApp.router(
-          routerConfig: _appRouter.config(),
+        child: GestureDetector(
+          onTap: () {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+          child: MaterialApp.router(
+            routerConfig: _appRouter.config(),
+            theme: appTheme(),
+          ),
         ),
       ),
     );
@@ -27,8 +38,8 @@ class MainApp extends StatelessWidget {
   void _listener(BuildContext context, MainAppState state) {
     state.maybeWhen(
       authExpired: () {
-        context.router.pushAndPopUntil(
-          LoginRoute(),
+        _appRouter.pushAndPopUntil(
+          const LoginRoute(),
           predicate: (_) => false,
         );
       },

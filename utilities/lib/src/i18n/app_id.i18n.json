@@ -1,0 +1,50 @@
+{
+    "fullName": "Nama lengkap",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Konfirmasi password",
+    "referralCode": "Kode referral",
+    "phoneNumber": "No telepon",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "submit": "Simpan",
+    "menu": {
+        "home": "Home",
+        "settings": "Pengaturan"
+    },
+    "settings": {
+        "yourAccount": "Akun kamu",
+        "editProfile": "Ubah profil",
+        "support": "Bantuan",
+        "logout": "Keluar"
+    },
+    "error": {
+        "defaultMessage": "Terjadi kesalahan"
+    },
+    "login": {
+        "messageTitle": "Selamat datang",
+        "messageDescription": "Isi data di bawah untuk mengakses akun Anda.",
+        "button": "Masuk",
+        "dontHaveAccount": "Belum punya akun?",
+        "createAccount": "Buat akun"
+    },
+    "register": {
+        "messageTitle": "Buat akun",
+        "messageDescription": "Mari mulai dengan mengisi data di bawah. Kamu dapat meminta kode referral dari orang yang mengundang kamu.",
+        "button": "Daftar",
+        "verifyEmailMessage": "Email telah dikirim ke emailmu.\nHarap verifikasi untuk melanjutkan"
+    },
+    "formValidations": {
+        "fieldParamNotValid": "{label} tidak valid",
+        "passwordMinLength": "Minimal panjang password adalah 8",
+        "passwordContainSpaces": "Password tidak boleh mengandung spasi",
+        "confirmPasswordNotEqual": "Password dan konfirmasi password tidak sama",
+        "fieldCannotBeEmpty": "Input tidak boleh kosong",
+        "fieldParamCannotBeEmpty": "{label} tidak boleh kosong"
+    },
+    "setupProfile": {
+        "title": "Setup profil",
+        "referralNotFound": "User with this referral code not found. Re-input or remove referral code to continue",
+        "referralInformation": "Referral Information"
+    }
+}

@@ -1,6 +1,0 @@
-{
-    "APP_ENV": "dev",
-    "APP_BASE_URL": "https://testing.com",
-    "SUPABASE_URL": "https://gocsresgppeqesqfqdmy.supabase.co",
-    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdvY3NyZXNncHBlcWVzcWZxZG15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODgxOTQ4MDEsImV4cCI6MjAwMzc3MDgwMX0.PzQJkl8Q4H8q00BBidCGVs6Seh3f3qxvHuA_egud7ic"
-}

@@ -14,7 +14,11 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:presenter/src/ui/login_bloc/login_bloc.dart' as _i3;
 import 'package:presenter/src/ui/main_bloc/main_app_bloc.dart' as _i5;
-import 'package:presenter/src/ui/splash_bloc/splash_bloc.dart' as _i6;
+import 'package:presenter/src/ui/register_bloc/register_bloc.dart' as _i6;
+import 'package:presenter/src/ui/settings_bloc/settings_bloc.dart' as _i7;
+import 'package:presenter/src/ui/setup_profile_bloc/setup_profile_bloc.dart'
+    as _i8;
+import 'package:presenter/src/ui/splash_bloc/splash_bloc.dart' as _i9;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -27,12 +31,26 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.LoginBloc>(
-        () => _i3.LoginBloc(gh<_i4.LoginWithEmailUseCase>()));
+    gh.factory<_i3.LoginBloc>(() => _i3.LoginBloc(
+          gh<_i4.LoginWithEmailUseCase>(),
+          gh<_i4.GetCurrentResellerProfileUseCase>(),
+        ));
     gh.factory<_i5.MainAppBloc>(
         () => _i5.MainAppBloc(gh<_i4.ListenAuthEventChangeUseCase>()));
-    gh.factory<_i6.SplashBloc>(
-        () => _i6.SplashBloc(gh<_i4.GetCurrentAuthUserUseCase>()));
+    gh.factory<_i6.RegisterBloc>(
+        () => _i6.RegisterBloc(gh<_i4.RegisterWithEmailUseCase>()));
+    gh.factory<_i7.SettingsBloc>(() => _i7.SettingsBloc(
+          gh<_i4.GetCurrentResellerProfileUseCase>(),
+          gh<_i4.LogoutUseCase>(),
+        ));
+    gh.factory<_i8.SetupProfileBloc>(() => _i8.SetupProfileBloc(
+          gh<_i4.CreateUserProfileUseCase>(),
+          gh<_i4.GetResellerProfileByReferralCodeUseCase>(),
+        ));
+    gh.factory<_i9.SplashBloc>(() => _i9.SplashBloc(
+          gh<_i4.GetCurrentAuthUserUseCase>(),
+          gh<_i4.GetCurrentResellerProfileUseCase>(),
+        ));
     return this;
   }
 }

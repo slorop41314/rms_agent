@@ -1,0 +1,50 @@
+{
+    "fullName": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "referralCode": "Referral code",
+    "phoneNumber": "Phone number",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "menu": {
+        "home": "Home",
+        "settings": "Settings"
+    },
+    "settings": {
+        "yourAccount": "Your account",
+        "editProfile": "Edit profile",
+        "support": "Support",
+        "logout": "Logout"
+    },
+    "error": {
+        "defaultMessage": "Error occured"
+    },
+    "login": {
+        "messageTitle": "Welcome back",
+        "messageDescription": "Fill out information below in order to access your account.",
+        "button": "Login",
+        "dontHaveAccount": "Don't have an account?",
+        "createAccount": "Create account"
+    },
+    "register": {
+        "messageTitle": "Create an account",
+        "messageDescription": "Let's get started by filling out the form. You can ask referral from your referree.",
+        "button": "Register",
+        "verifyEmailMessage": "Email sent to your registered account.\nPlease verify to continue."
+    },
+    "formValidations": {
+        "fieldParamNotValid": "{label} is not valid",
+        "passwordMinLength": "Minimum password length is 8",
+        "passwordContainSpaces": "Password cannot contain spaces",
+        "confirmPasswordNotEqual": "Password and confirm password are not equal",
+        "fieldCannotBeEmpty": "Field cannot be empty",
+        "fieldParamCannotBeEmpty": "{label} cannot be empty"
+    },
+    "setupProfile": {
+        "title": "Setup profile",
+        "referralNotFound": "User with this referral code not found. Re-input or remove referral code to continue",
+        "referralInformation": "Referral Information"
+    }
+}

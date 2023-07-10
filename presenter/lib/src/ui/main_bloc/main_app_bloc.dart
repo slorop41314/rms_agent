@@ -16,7 +16,7 @@ class MainAppBloc extends Bloc<MainAppEvent, MainAppState> {
 
   MainAppBloc(
     this._listenAuthEventChangeUseCase,
-  ) : super(MainAppState.initial()) {
+  ) : super(const MainAppState.initial()) {
     on<_Started>(_mapStartedEventToState);
   }
 
@@ -24,10 +24,15 @@ class MainAppBloc extends Bloc<MainAppEvent, MainAppState> {
     _Started event,
     Emitter<MainAppState> emit,
   ) async {
-    this._listenAuthEventChangeUseCase.execute().listen((event) {
-      if (event.event == AuthChangeEvent.signedOut) {
-        emit(MainAppState.authExpired());
-      }
-    });
+    await emit.forEach(
+      this._listenAuthEventChangeUseCase.execute(),
+      onData: (event) {
+        if (event.event == AuthChangeEvent.signedOut) {
+          return const MainAppState.authExpired();
+        }
+
+        return const MainAppState.initial();
+      },
+    );
   }
 }

@@ -1,7 +1,7 @@
 part of 'shared.dart';
 
 class CustomBottomSheet {
-  static PersistentBottomSheetController show(
+  static Future<dynamic> show(
     BuildContext context, {
     String? title,
     Widget? content,
@@ -11,7 +11,7 @@ class CustomBottomSheet {
     bool showBackButton = true,
     bool isDismissible = true,
   }) {
-    return showBottomSheet(
+    return showModalBottomSheet(
       context: context,
       builder: (context) => WillPopScope(
         onWillPop: () async {
@@ -95,7 +95,7 @@ class CustomBottomSheet {
     );
   }
 
-  static PersistentBottomSheetController showConfirmation(
+  static Future<dynamic> showConfirmation(
     BuildContext context, {
     required String message,
     String? title,

@@ -14,14 +14,24 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<AuthResponse> loginWithEmail(String email, String password) {
     return _authRemote.loginWithEmail(email, password);
   }
-  
+
+  @override
+  Future<AuthResponse> registerWithEmail(String email, String password) {
+    return _authRemote.registerWithEmail(email, password);
+  }
+
   @override
   Stream<AuthState> listenAuthEventChanges() {
     return _authRemote.listenAuthEventChanges();
   }
-  
+
   @override
   Future<User?> getUserAuth() {
     return _authRemote.getUserAuth();
+  }
+
+  @override
+  Future<void> logout() {
+    return _authRemote.logout();
   }
 }

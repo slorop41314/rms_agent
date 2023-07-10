@@ -21,6 +21,7 @@ mixin _$SplashState {
     required TResult Function() initial,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function() createProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$SplashState {
     TResult? Function()? initial,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function()? createProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$SplashState {
     TResult Function()? initial,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function()? createProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$SplashState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_CreateProfile value) createProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$SplashState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_CreateProfile value)? createProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$SplashState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_CreateProfile value)? createProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +126,7 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function() createProfile,
   }) {
     return initial();
   }
@@ -130,6 +137,7 @@ class _$_Initial implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function()? createProfile,
   }) {
     return initial?.call();
   }
@@ -140,6 +148,7 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function()? createProfile,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -154,6 +163,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_CreateProfile value) createProfile,
   }) {
     return initial(this);
   }
@@ -164,6 +174,7 @@ class _$_Initial implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_CreateProfile value)? createProfile,
   }) {
     return initial?.call(this);
   }
@@ -174,6 +185,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_CreateProfile value)? createProfile,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -228,6 +240,7 @@ class _$_Authenticated implements _Authenticated {
     required TResult Function() initial,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function() createProfile,
   }) {
     return authenticated();
   }
@@ -238,6 +251,7 @@ class _$_Authenticated implements _Authenticated {
     TResult? Function()? initial,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function()? createProfile,
   }) {
     return authenticated?.call();
   }
@@ -248,6 +262,7 @@ class _$_Authenticated implements _Authenticated {
     TResult Function()? initial,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function()? createProfile,
     required TResult orElse(),
   }) {
     if (authenticated != null) {
@@ -262,6 +277,7 @@ class _$_Authenticated implements _Authenticated {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_CreateProfile value) createProfile,
   }) {
     return authenticated(this);
   }
@@ -272,6 +288,7 @@ class _$_Authenticated implements _Authenticated {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_CreateProfile value)? createProfile,
   }) {
     return authenticated?.call(this);
   }
@@ -282,6 +299,7 @@ class _$_Authenticated implements _Authenticated {
     TResult Function(_Initial value)? initial,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_CreateProfile value)? createProfile,
     required TResult orElse(),
   }) {
     if (authenticated != null) {
@@ -336,6 +354,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     required TResult Function() initial,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function() createProfile,
   }) {
     return unauthenticated();
   }
@@ -346,6 +365,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult? Function()? initial,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function()? createProfile,
   }) {
     return unauthenticated?.call();
   }
@@ -356,6 +376,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult Function()? initial,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function()? createProfile,
     required TResult orElse(),
   }) {
     if (unauthenticated != null) {
@@ -370,6 +391,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_CreateProfile value) createProfile,
   }) {
     return unauthenticated(this);
   }
@@ -380,6 +402,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_CreateProfile value)? createProfile,
   }) {
     return unauthenticated?.call(this);
   }
@@ -390,6 +413,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult Function(_Initial value)? initial,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_CreateProfile value)? createProfile,
     required TResult orElse(),
   }) {
     if (unauthenticated != null) {
@@ -401,6 +425,120 @@ class _$_Unauthenticated implements _Unauthenticated {
 
 abstract class _Unauthenticated implements SplashState {
   const factory _Unauthenticated() = _$_Unauthenticated;
+}
+
+/// @nodoc
+abstract class _$$_CreateProfileCopyWith<$Res> {
+  factory _$$_CreateProfileCopyWith(
+          _$_CreateProfile value, $Res Function(_$_CreateProfile) then) =
+      __$$_CreateProfileCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CreateProfileCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$_CreateProfile>
+    implements _$$_CreateProfileCopyWith<$Res> {
+  __$$_CreateProfileCopyWithImpl(
+      _$_CreateProfile _value, $Res Function(_$_CreateProfile) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CreateProfile implements _CreateProfile {
+  const _$_CreateProfile();
+
+  @override
+  String toString() {
+    return 'SplashState.createProfile()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CreateProfile);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function() createProfile,
+  }) {
+    return createProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function()? createProfile,
+  }) {
+    return createProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function()? createProfile,
+    required TResult orElse(),
+  }) {
+    if (createProfile != null) {
+      return createProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_CreateProfile value) createProfile,
+  }) {
+    return createProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_CreateProfile value)? createProfile,
+  }) {
+    return createProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_CreateProfile value)? createProfile,
+    required TResult orElse(),
+  }) {
+    if (createProfile != null) {
+      return createProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CreateProfile implements SplashState {
+  const factory _CreateProfile() = _$_CreateProfile;
 }
 
 /// @nodoc

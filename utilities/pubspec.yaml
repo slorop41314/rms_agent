@@ -11,6 +11,8 @@ environment:
 dependencies:
   injectable: ^2.1.2
   get_it: ^7.6.0
+  slang: ^3.19.0
+  slang_flutter: ^3.19.0
 
 dev_dependencies:
   build_runner: ^2.4.5
