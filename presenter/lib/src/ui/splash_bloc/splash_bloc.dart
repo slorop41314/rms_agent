@@ -13,9 +13,11 @@ part 'splash_bloc.freezed.dart';
 @injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final GetCurrentAuthUserUseCase _getCurrentAuthUserUseCase;
+  final GetCurrentResellerProfileUseCase _getCurrentResellerProfileUseCase;
 
   SplashBloc(
     this._getCurrentAuthUserUseCase,
+    this._getCurrentResellerProfileUseCase,
   ) : super(const SplashState.initial()) {
     on<_Started>(_mapStartedEventToState);
   }
@@ -27,6 +29,11 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     final user = await _getCurrentAuthUserUseCase.execute();
     if (user == null) {
       emit(const SplashState.unauthenticated());
+      return;
+    }
+    final userProfile = await _getCurrentResellerProfileUseCase.execute();
+    if (userProfile == null) {
+      emit(const SplashState.createProfile());
       return;
     }
     emit(const SplashState.authenticated());

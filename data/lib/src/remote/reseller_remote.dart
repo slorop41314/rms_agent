@@ -15,7 +15,7 @@ class ResellerRemote {
     this._sb,
   );
 
-  Future<ResellerModel> getProfile(String userId) async {
+  Future<ResellerModel?> getProfile(String userId) async {
     final data = await _sb
         .from(RESELLER_TABLE)
         .select()
@@ -23,8 +23,8 @@ class ResellerRemote {
           'user_id',
           userId,
         )
-        .single();
-    return ResellerModel.fromJson(data);
+        .maybeSingle();
+    return data == null ? null : ResellerModel.fromJson(data);
   }
 
   Future<void> addProfile(

@@ -72,12 +72,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 label: t.email,
                 controller: _emailController,
                 errorMessage: formValidation['email'],
+                keyboardType: TextInputType.emailAddress,
               ),
               CustomGap.vLarge(),
               CustomInput(
                 label: t.password,
                 controller: _passwordController,
                 errorMessage: formValidation['password'],
+                secureText: true,
+                keyboardType: TextInputType.visiblePassword,
               ),
               CustomGap.vXxl(),
               CustomButton(
@@ -149,6 +152,12 @@ class _LoginScreenState extends State<LoginScreen> {
       verifyEmail: () {
         context.router.push(
           const VerifyEmailRoute(),
+        );
+      },
+      setupProfile: () {
+        context.router.pushAndPopUntil(
+          const SetupProfileRoute(),
+          predicate: (_) => false,
         );
       },
       orElse: () {},

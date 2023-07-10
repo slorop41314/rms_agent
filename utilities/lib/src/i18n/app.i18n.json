@@ -43,6 +43,7 @@
         "fieldParamCannotBeEmpty": "{label} cannot be empty"
     },
     "setupProfile": {
+        "title": "Setup profile",
         "referralNotFound": "User with this referral code not found. Re-input or remove referral code to continue",
         "referralInformation": "Referral Information"
     }

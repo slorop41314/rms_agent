@@ -41,6 +41,12 @@ class SplashScreen extends StatelessWidget {
           predicate: (_) => false,
         );
       },
+      createProfile: () {
+        context.router.pushAndPopUntil(
+          const SetupProfileRoute(),
+          predicate: (_) => false,
+        );
+      },
       orElse: () => null,
     );
   }

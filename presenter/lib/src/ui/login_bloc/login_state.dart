@@ -13,5 +13,6 @@ class LoginState with _$LoginState {
   }) = LoadedLoginState;
   const factory LoginState.success() = _Success;
   const factory LoginState.verifyEmail() = _VerifyEmail;
+  const factory LoginState.setupProfile() = _SetupProfile;
   const factory LoginState.error({String? errorMessage}) = _Error;
 }

@@ -14,9 +14,11 @@ part 'login_bloc.freezed.dart';
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final LoginWithEmailUseCase _loginWithEmailUseCase;
+  final GetCurrentResellerProfileUseCase _getCurrentResellerProfileUseCase;
 
   LoginBloc(
     this._loginWithEmailUseCase,
+    this._getCurrentResellerProfileUseCase,
   ) : super(const LoginState.initial()) {
     on<_Started>(_mapStartedEventToState);
     on<_LoginButtonPressed>(_mapLoginButtonPressedEventToState);
@@ -53,6 +55,13 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         event.email,
         event.password,
       );
+
+      if (await _getCurrentResellerProfileUseCase.execute() == null) {
+        emit(
+          const LoginState.setupProfile(),
+        );
+        return;
+      }
 
       emit(
         const LoginState.success(),

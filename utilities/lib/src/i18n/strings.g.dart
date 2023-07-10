@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 66 (33 per locale)
+/// Strings: 68 (34 per locale)
 ///
-/// Built on 2023-07-03 at 14:55 UTC
+/// Built on 2023-07-10 at 09:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -248,6 +248,7 @@ class _StringsSetupProfileEn {
 	final _StringsEn _root; // ignore: unused_field
 
 	// Translations
+	String get title => 'Setup profile';
 	String get referralNotFound => 'User with this referral code not found. Re-input or remove referral code to continue';
 	String get referralInformation => 'Referral Information';
 }
@@ -378,6 +379,7 @@ class _StringsSetupProfileId implements _StringsSetupProfileEn {
 	@override final _StringsId _root; // ignore: unused_field
 
 	// Translations
+	@override String get title => 'Setup profil';
 	@override String get referralNotFound => 'User with this referral code not found. Re-input or remove referral code to continue';
 	@override String get referralInformation => 'Referral Information';
 }
@@ -419,6 +421,7 @@ extension on _StringsEn {
 			case 'formValidations.confirmPasswordNotEqual': return 'Password and confirm password are not equal';
 			case 'formValidations.fieldCannotBeEmpty': return 'Field cannot be empty';
 			case 'formValidations.fieldParamCannotBeEmpty': return ({required Object label}) => '${label} cannot be empty';
+			case 'setupProfile.title': return 'Setup profile';
 			case 'setupProfile.referralNotFound': return 'User with this referral code not found. Re-input or remove referral code to continue';
 			case 'setupProfile.referralInformation': return 'Referral Information';
 			default: return null;
@@ -460,6 +463,7 @@ extension on _StringsId {
 			case 'formValidations.confirmPasswordNotEqual': return 'Password dan konfirmasi password tidak sama';
 			case 'formValidations.fieldCannotBeEmpty': return 'Input tidak boleh kosong';
 			case 'formValidations.fieldParamCannotBeEmpty': return ({required Object label}) => '${label} tidak boleh kosong';
+			case 'setupProfile.title': return 'Setup profil';
 			case 'setupProfile.referralNotFound': return 'User with this referral code not found. Re-input or remove referral code to continue';
 			case 'setupProfile.referralInformation': return 'Referral Information';
 			default: return null;

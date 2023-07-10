@@ -42,7 +42,9 @@ class _SetupProfileScreenState extends State<SetupProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(''),
+      appBar: CustomAppBar(
+        t.setupProfile.title,
+      ),
       body: BlocConsumer<SetupProfileBloc, SetupProfileState>(
         buildWhen: (_, current) => current.rebuild,
         listener: _setupProfileListener,

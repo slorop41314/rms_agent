@@ -31,8 +31,10 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.LoginBloc>(
-        () => _i3.LoginBloc(gh<_i4.LoginWithEmailUseCase>()));
+    gh.factory<_i3.LoginBloc>(() => _i3.LoginBloc(
+          gh<_i4.LoginWithEmailUseCase>(),
+          gh<_i4.GetCurrentResellerProfileUseCase>(),
+        ));
     gh.factory<_i5.MainAppBloc>(
         () => _i5.MainAppBloc(gh<_i4.ListenAuthEventChangeUseCase>()));
     gh.factory<_i6.RegisterBloc>(
@@ -45,8 +47,10 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i4.CreateUserProfileUseCase>(),
           gh<_i4.GetResellerProfileByReferralCodeUseCase>(),
         ));
-    gh.factory<_i9.SplashBloc>(
-        () => _i9.SplashBloc(gh<_i4.GetCurrentAuthUserUseCase>()));
+    gh.factory<_i9.SplashBloc>(() => _i9.SplashBloc(
+          gh<_i4.GetCurrentAuthUserUseCase>(),
+          gh<_i4.GetCurrentResellerProfileUseCase>(),
+        ));
     return this;
   }
 }
